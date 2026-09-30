@@ -1,0 +1,1404 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Veladura</title>
+<meta name="description" content="Veladura: hand washes, full details, paint correction, ceramic coating and paint protection film in Miami. Concept website by One Aim Agency.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f3ede3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312161a'/%3E%3Ccircle cx='32' cy='32' r='12' fill='%231b8fc6'/%3E%3C/svg%3E">
+<style>#nl-badge-frame,iframe[title*="Netlify"]{display:none!important}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --sand:#f3ede3; --sun:#fffcf6; --cream:#e7dac4; --ink:#12161a; --muted:#57544f; --soft:#8a857d; --rule:rgba(18,22,26,.14);
+  --blue:#1b8fc6; --blue-t:#0e6c9b; --blue-deep:#0b4f73; --bronze:#9a6b3f; --bronze-l:#c9985f;
+  --night:#0b0b0a; --deep:#10151a; --deep2:#161d24; --paper:#edebe7; --rule-d:rgba(237,235,231,.14); --muted-d:#b7b2aa;
+  --lamp:#f4f1ea; --film:#7fb6dc;
+  --sans:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+  --gut:clamp(16px,5vw,72px); --max:1360px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{background:var(--sand);scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--sand);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.mono{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gut)}
+.idx{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;margin-bottom:clamp(24px,3.5vw,44px)}
+.idx i{height:1px;background:currentColor;opacity:.2}
+.idx span:first-child{color:var(--bronze)}
+.idx span:last-child{opacity:.6}
+.dk .idx span:first-child{color:var(--bronze-l)}
+h2.display{font-weight:450;font-stretch:120%;font-size:clamp(44px,7.4vw,118px);line-height:.9;letter-spacing:-.03em;margin:0;text-wrap:balance}
+.it{font-style:italic;font-stretch:100%;font-weight:350;letter-spacing:-.01em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 22px;background:var(--ink);color:var(--sun);border:1px solid var(--ink);text-decoration:none;font-weight:500;font-stretch:112%;font-size:15px;cursor:pointer;min-height:50px}
+.btn.blue{background:var(--blue-t);border-color:var(--blue-t);color:#fff}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.light{background:var(--sun);color:var(--ink);border-color:var(--sun)}
+.price{font-family:var(--mono);font-weight:500;letter-spacing:-.01em}
+.demo{display:inline-block;border:1px dashed currentColor;padding:4px 8px 3px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.cred{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:rgba(255,252,246,.78)}
+.dk{background:var(--deep);color:var(--paper);color-scheme:dark}
+.dk .mut{color:var(--muted-d)}
+.mut{color:var(--muted)}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto;z-index:50;padding-top:env(safe-area-inset-top,0px);color:var(--paper);transition:background .4s,color .4s,border-color .4s;border-bottom:1px solid transparent}
+.nav .wrap{display:flex;align-items:center;gap:26px;height:66px}
+.brand{font-weight:500;font-stretch:125%;letter-spacing:.3em;font-size:14px;text-decoration:none}
+.nav nav{display:flex;gap:24px;margin-left:auto}
+.nav nav a{text-decoration:none;font-size:14px;opacity:.82}
+.nav nav a:hover{opacity:1}
+.nav .cta{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid currentColor;text-decoration:none;font-size:14px;font-weight:500;font-stretch:110%}
+.nav.lt{background:rgba(243,237,227,.92);color:var(--ink);border-color:var(--rule);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nav.lt .cta{background:var(--ink);color:var(--sun);border-color:var(--ink)}
+.nav.dkn{background:rgba(16,21,26,.86);border-color:var(--rule-d);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.menu-btn{display:none;margin-left:auto;background:none;border:1px solid currentColor;color:inherit;padding:9px 12px;font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;cursor:pointer;min-height:42px}
+.sheet{position:fixed;inset:0;z-index:60;background:var(--sand);color:var(--ink);padding:calc(18px + env(safe-area-inset-top,0px)) var(--gut) 24px;display:flex;flex-direction:column}
+.sheet .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:26px}
+.sheet a.l{font-stretch:118%;font-size:34px;line-height:1.2;text-decoration:none;padding:10px 0;border-bottom:1px solid var(--rule)}
+.sheet a.l small{display:block;font:500 11px/1.4 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+.sheet button{background:none;border:1px solid currentColor;color:inherit;padding:9px 12px;font:500 11px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;min-height:42px}
+.sheet .btn{margin-top:auto}
+
+/* ---------- 1 · The Lamp (locked) ---------- */
+.run{height:300vh;position:relative;background:#0a0a0a;color:var(--paper)}
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;touch-action:pan-y;user-select:none;-webkit-user-select:none;cursor:crosshair;background:#0a0a0a}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.shade{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 62% 70% at 0% 100%,rgba(10,10,10,.86),rgba(10,10,10,.45) 55%,transparent 80%),linear-gradient(180deg,rgba(10,10,10,.55),transparent 22%)}
+.ring{position:absolute;left:0;top:0;width:86px;height:86px;margin:-43px 0 0 -43px;border-radius:50%;border:1px solid rgba(244,241,234,.55);pointer-events:none;transition:width .3s,height .3s,margin .3s,border-color .3s}
+.ring::after{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px solid rgba(244,241,234,.14)}
+.stage.hold .ring{width:110px;height:110px;margin:-55px 0 0 -55px;border-color:rgba(244,241,234,.85)}
+.cap{position:absolute;left:var(--gut);bottom:clamp(40px,11vh,110px);width:min(640px,calc(100% - 2 * var(--gut)));pointer-events:none}
+.cap>div{transition:opacity .6s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.cap .off{opacity:0;transform:translateY(12px)}
+.cap .acc{color:#c69c6d}
+.cap h1{font-weight:450;font-stretch:118%;font-size:clamp(40px,6vw,92px);line-height:.94;letter-spacing:-.025em;margin:14px 0 16px;text-wrap:balance}
+.cap p{margin:0;color:#d4d0c9;font-size:17px;max-width:40ch}
+.cap h1,.cap p{text-shadow:0 1px 16px rgba(0,0,0,.7)}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;pointer-events:auto}
+.stage .btn{background:var(--lamp);color:var(--ink);border-color:var(--lamp)}
+.stage .btn.ghost{background:transparent;color:var(--paper);border-color:var(--paper)}
+.hint{position:absolute;right:var(--gut);bottom:clamp(40px,11vh,110px);color:#8e8b86;display:flex;gap:10px;align-items:center;pointer-events:none;transition:opacity .6s}
+.hint i{width:26px;height:26px;border:1px solid rgba(244,241,234,.5);border-radius:50%;position:relative}
+.hint i::after{content:"";position:absolute;left:50%;top:50%;width:4px;height:4px;margin:-2px;border-radius:50%;background:var(--lamp)}
+.load{position:absolute;left:0;bottom:0;height:1px;background:rgba(244,241,234,.5);transition:width .3s,opacity .6s}
+
+/* ---------- 2 · Into the light ---------- */
+.open{position:relative;background:var(--sand)}
+.open .photo{position:relative;height:min(112vh,1080px);min-height:620px;overflow:hidden}
+.open .photo img{width:100%;height:100%;object-fit:cover;object-position:38% 60%}
+.open .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,14,.55),rgba(10,12,14,0) 30%,rgba(10,12,14,0) 55%,rgba(10,12,14,.5))}
+.open .head{position:absolute;left:0;right:0;top:clamp(96px,14vh,150px);z-index:1;color:var(--sun)}
+.open .head h2{font-weight:450;font-stretch:120%;font-size:clamp(48px,8.4vw,136px);line-height:.88;letter-spacing:-.035em;margin:0;max-width:11ch;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.open .head p{max-width:40ch;font-size:18px;margin:22px 0 0;color:#f7f1e6}
+.open .photo .cred{position:absolute;right:var(--gut);bottom:calc(clamp(120px,15vw,170px) + 12px);z-index:1}
+.doors{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;margin-top:clamp(-170px,-15vw,-120px)}
+.door{display:grid;grid-template-rows:auto 1fr auto;gap:10px;padding:clamp(24px,3vw,44px);text-decoration:none;min-height:clamp(240px,24vw,330px);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.door:hover{transform:translateY(-4px)}
+.door.care{background:var(--sun);color:var(--ink);border-top:4px solid var(--blue)}
+.door.prot{background:var(--deep);color:var(--paper);border-top:4px solid var(--bronze-l)}
+.door .mono{opacity:.7}
+.door h3{font-weight:450;font-stretch:120%;font-size:clamp(32px,3.8vw,56px);line-height:.95;letter-spacing:-.02em;margin:6px 0 0}
+.door p{margin:0;max-width:34ch;font-size:15.5px;opacity:.85}
+.door .go{display:flex;flex-wrap:wrap;gap:4px 16px;justify-content:space-between;align-items:baseline;border-top:1px solid currentColor;padding-top:14px;margin-top:10px;opacity:.95}
+.door .go b{font-weight:500;font-stretch:112%}
+.door.care .go .price{color:var(--blue-t)}
+.door.prot .go .price{color:var(--bronze-l)}
+
+/* ---------- 3 · Care ---------- */
+.care{padding-block:clamp(88px,11vw,150px) clamp(40px,6vw,80px)}
+.care-head{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:end}
+.care-head p{font-size:18px;margin:0;max-width:40ch}
+.sizebar{position:sticky;top:66px;z-index:20;margin-top:clamp(36px,5vw,60px);background:rgba(243,237,227,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--ink);border-bottom:1px solid var(--rule)}
+.sizebar .in{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 0}
+.sizebar .lab{color:var(--soft)}
+.seg{display:inline-flex;border:1px solid var(--ink)}
+.seg button{appearance:none;background:transparent;border:0;border-right:1px solid var(--ink);padding:10px 16px 9px;font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink);cursor:pointer;min-height:42px}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--sun)}
+.sizebar .jump{margin-left:auto;display:flex;gap:18px;flex-wrap:wrap}
+.sizebar .jump a{font-size:13.5px;text-decoration:none;color:var(--muted)}
+.sizebar .jump a:hover{color:var(--ink)}
+.pkg{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,72px);align-items:center;padding-block:clamp(32px,4.4vw,64px);border-bottom:1px solid var(--rule)}
+.pkg:nth-of-type(even){grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.pkg:nth-of-type(even) figure{order:2}
+.pkg figure{margin:0;position:relative;aspect-ratio:3/2;overflow:hidden;background:#222}
+.pkg figure img{width:100%;height:100%;object-fit:cover}
+.pkg figure .cred{position:absolute;left:14px;bottom:12px}
+.pkg .n{font-family:var(--mono);font-size:12px;color:var(--bronze)}
+.pkg h3{font-weight:450;font-stretch:120%;font-size:clamp(34px,4.2vw,64px);line-height:.94;letter-spacing:-.025em;margin:10px 0 8px}
+.pkg .meta{color:var(--soft);margin-bottom:22px}
+.pkg .lead{font-size:18px;margin:0 0 12px;max-width:34ch}
+.pkg details.inc{border:0;margin:22px 0 0}
+.pkg details.inc[open] summary{border-bottom:0}
+.pfrom .fr{font-size:15px;color:var(--soft);font-weight:400;margin-right:4px}
+.pkg details.inc summary{padding:12px 0;font-size:14px;font-weight:500;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);justify-content:flex-start;gap:12px}
+.pkg details.inc summary .mono{color:var(--soft);font-size:10.5px;font-weight:400;align-self:center}
+.pkg details.inc summary::after{margin-left:auto}
+.pkg ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.pkg li{padding:9px 0 8px 22px;border-bottom:1px solid var(--rule);font-size:15px;position:relative;color:var(--muted)}
+.pkg li::before{content:"";position:absolute;left:0;top:17px;width:10px;height:1px;background:var(--blue)}
+.pkg li.plus{color:var(--ink)}
+.pkg li.plus::before{background:var(--ink)}
+.pbuy{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.pfrom{display:grid;gap:2px}
+.pfrom .mono{color:var(--soft);font-size:11px}
+.pfrom .price{font-size:30px}
+.pfrom .sz{font-size:13px;color:var(--soft)}
+.pkg.top{background:var(--sun);margin-inline:calc(var(--gut) * -1);padding-inline:var(--gut);border:0}
+.tier{display:inline-block;background:var(--ink);color:var(--sun);padding:4px 8px 3px;margin-left:10px;vertical-align:4px;font-size:10px}
+
+/* add-ons */
+.addons{background:var(--cream);padding-block:0}
+.addons .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.addons figure{margin:0;position:relative;min-height:560px;overflow:hidden}
+.addons figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.addons figure .cred{position:absolute;left:16px;bottom:14px}
+.addons .body{padding:clamp(48px,7vw,104px) var(--gut)}
+.addons h2{font-weight:450;font-stretch:118%;font-size:clamp(34px,4.4vw,64px);line-height:.95;letter-spacing:-.02em;margin:0 0 12px}
+.addons .sub{font-size:17px;margin:0 0 30px;max-width:42ch}
+.adlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px;border-top:1px solid var(--ink)}
+.adlist div{display:flex;justify-content:space-between;gap:12px;padding:12px 0 11px;border-bottom:1px solid rgba(18,22,26,.16);font-size:15.5px}
+.adlist div span:first-child small{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+.adlist .price{white-space:nowrap}
+.adlist.sm{border-top:0}
+.adlist.sm div{font-size:15px;padding:10px 0 9px}
+.addons details.more{border:0;margin-top:22px}
+.addons details.more summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;padding:14px 0;border-bottom:1px solid rgba(18,22,26,.16);font-size:16px}
+.addons details.more summary .mono{color:var(--muted);font-size:10.5px;letter-spacing:.1em;font-weight:400;flex:1 1 auto}
+.addons details.more summary::after{margin-left:auto}
+.fl{color:var(--blue-t);font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-left:6px}
+
+/* cars */
+.cars{padding-block:clamp(88px,11vw,150px) clamp(64px,8vw,110px)}
+.cars-head{display:flex;justify-content:space-between;align-items:end;gap:28px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,52px)}
+.cars-head p{max-width:40ch;margin:0;font-size:17px}
+/* the cars: four placements, captioned like a feature, not a gallery */
+.car{margin:0}
+.car .ph{position:relative;overflow:hidden;background:#222}
+.car img{width:100%;height:100%;object-fit:cover}
+.car figcaption{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;padding-top:14px;border-top:1px solid var(--ink);margin-top:14px}
+.car figcaption b{font-weight:500;font-stretch:112%;font-size:17px}
+.car figcaption .where{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);justify-self:end;align-self:center}
+.car figcaption span.note{grid-column:1/-1;color:var(--muted);font-size:15px;max-width:40ch}
+.car figcaption .credit{grid-column:1/-1;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;color:var(--soft)}
+.lead-car{display:grid;grid-template-columns:minmax(0,8fr) minmax(0,4fr);gap:clamp(24px,4vw,64px);align-items:end}
+.lead-car .ph{aspect-ratio:16/10}
+.marques{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.marques li{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0 9px;border-bottom:1px solid var(--rule);font-stretch:115%;font-size:clamp(20px,1.9vw,27px);line-height:1.2;letter-spacing:-.01em}
+.marques li span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.marques-h{color:var(--bronze);margin-bottom:14px}
+.trio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2.4vw,36px);margin-top:clamp(48px,6vw,88px);align-items:start}
+.trio .ph{aspect-ratio:4/5}
+.trio .car:nth-child(2){margin-top:clamp(40px,6vw,96px)}
+.note-ill{margin-top:18px;color:var(--soft);font-size:13px}
+
+/* ---------- 4 · Protection (deep) ---------- */
+.prot{padding-block:clamp(96px,12vw,170px) clamp(72px,9vw,120px)}
+.prot-head{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:end;margin-bottom:clamp(48px,7vw,96px)}
+.prot-head p{font-size:18px;margin:0 0 18px;max-width:40ch}
+.sub-h{display:flex;align-items:baseline;gap:16px;margin:clamp(56px,8vw,110px) 0 22px;padding-top:18px;border-top:1px solid var(--rule-d)}
+.sub-h h3{margin:0;font-weight:450;font-stretch:118%;font-size:clamp(28px,3.2vw,46px);letter-spacing:-.02em}
+.sub-h .mono{color:var(--bronze-l)}
+.paint{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(24px,4vw,64px);align-items:stretch}
+.prow{padding:20px 0;border-bottom:1px solid var(--rule-d);display:grid;grid-template-columns:1fr auto;gap:6px 20px}
+.prow:first-child{border-top:1px solid var(--rule-d)}
+.prow h4{margin:0;font-weight:500;font-stretch:112%;font-size:22px}
+.prow h4 small{display:block;font:500 11px/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted-d);margin-top:3px}
+.prow p{grid-column:1/-1;margin:0;color:var(--muted-d);font-size:15px;max-width:52ch}
+.prow .price{color:var(--bronze-l);font-size:15px;text-align:right;white-space:nowrap}
+.q{color:var(--bronze-l);font-family:var(--mono);font-size:12.5px;letter-spacing:.02em}
+.vid{position:relative;overflow:hidden;background:#000;min-height:360px}
+.vid video,.vid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vid::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.72),transparent 55%)}
+.vid .cap2{position:absolute;left:20px;right:20px;bottom:18px;z-index:1}
+.vid .cap2 b{display:block;font-weight:500;font-stretch:112%;font-size:19px}
+.vid .cap2 span{font-size:14px;color:#d8d3cb}
+.vid .play{position:absolute;right:16px;top:16px;z-index:2}
+.coats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule-d);border:1px solid var(--rule-d)}
+.coat{background:var(--deep2);padding:26px 24px 24px;display:grid;grid-template-rows:auto auto 1fr auto;gap:10px}
+.coat .mono{color:var(--bronze-l)}
+.coat h4{margin:0;font-weight:450;font-stretch:118%;font-size:32px;letter-spacing:-.02em}
+.coat .yrs{font-family:var(--mono);font-size:13px;color:var(--muted-d)}
+.coat ul{list-style:none;margin:6px 0 0;padding:0}
+.coat li{padding:8px 0;border-top:1px solid var(--rule-d);font-size:14.5px;color:var(--muted-d)}
+.coat .price{font-size:22px;color:var(--paper);padding-top:14px;border-top:1px solid var(--bronze-l)}
+.coat.mid{background:#1c252d}
+.coatband{position:relative;margin-top:10px;height:clamp(200px,24vw,340px);overflow:hidden}
+.coatband img{width:100%;height:100%;object-fit:cover;object-position:50% 45%}
+.coatband .cred{position:absolute;right:14px;bottom:10px}
+.filmband{margin:0 0 clamp(32px,4.5vw,56px);height:clamp(220px,30vw,420px)}
+.film{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,80px);align-items:center}
+.plan-box{background:var(--night);padding:clamp(18px,3vw,36px);display:grid;place-items:center;aspect-ratio:4/5;max-height:78svh;border:1px solid var(--rule-d)}
+.plan-box svg{height:100%;width:auto;max-width:100%}
+.pnl{fill:rgba(237,235,231,0);stroke:rgba(237,235,231,.45);stroke-width:1;vector-effect:non-scaling-stroke;stroke-linejoin:round;transition:fill .45s,stroke .45s}
+.pnl.on{fill:rgba(127,182,220,.3);stroke:#bfe0f4}
+.glass{fill:rgba(237,235,231,.04);stroke:rgba(237,235,231,.22);stroke-width:1;vector-effect:non-scaling-stroke}
+.body{fill:none;stroke:rgba(237,235,231,.85);stroke-width:1.3;vector-effect:non-scaling-stroke}
+.tyre{fill:#050505;stroke:rgba(237,235,231,.22);stroke-width:1;vector-effect:non-scaling-stroke}
+.cut{stroke:#c69c6d;stroke-width:1.2;vector-effect:non-scaling-stroke;stroke-dasharray:5 4;transition:opacity .4s}
+.kits{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.kits button{appearance:none;background:transparent;border:1px solid var(--rule-d);color:var(--muted-d);padding:11px 15px 10px;font:500 11px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;min-height:44px}
+.kits button[aria-pressed="true"]{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.kit h4{font-weight:450;font-stretch:118%;font-size:clamp(30px,3.2vw,46px);line-height:1;margin:0 0 10px}
+.kit p{font-size:16px;max-width:42ch;margin:0 0 18px;color:var(--muted-d)}
+.kit .price{color:var(--bronze-l);font-size:20px;margin-bottom:18px;display:block}
+.panels{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 22px;border-top:1px solid var(--rule-d)}
+.panels li{display:flex;justify-content:space-between;gap:10px;padding:9px 0 8px;border-bottom:1px solid var(--rule-d);font-size:14.5px;color:#6f6c67;transition:color .3s}
+.panels li i{font-style:normal;font-family:var(--mono);font-size:10.5px}
+.panels li.on{color:var(--paper)}
+.panels li.on i{color:var(--film)}
+.small{font-size:13px;color:#8e8b86;margin-top:14px}
+.also{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,4vw,56px);align-items:center}
+.tint-law{margin:0;color:var(--muted-d);font-size:15px;max-width:44ch;padding-left:18px;border-left:1px solid var(--bronze-l)}
+.inspect{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) minmax(0,1.3fr);gap:10px;margin-top:clamp(56px,8vw,110px);align-items:stretch}
+.inspect figure{margin:0;aspect-ratio:4/5;overflow:hidden}
+.inspect img{width:100%;height:100%;object-fit:cover}
+.inspect .txt{background:var(--deep2);padding:clamp(22px,3vw,40px);display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.inspect .txt h3{margin:0;font-weight:450;font-stretch:118%;font-size:clamp(26px,2.8vw,40px);line-height:1}
+.inspect .txt p{margin:0;color:var(--muted-d)}
+
+/* ---------- 5 · Club ---------- */
+.club{position:relative;background:var(--blue-deep);color:#fff;overflow:hidden}
+.club .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(92vh,820px)}
+.club figure{margin:0;position:relative;overflow:hidden}
+.club figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.club figure .cred{position:absolute;left:14px;bottom:12px}
+.club .body{padding:clamp(56px,8vw,120px) var(--gut);display:flex;flex-direction:column;justify-content:center}
+.club .idx span:first-child{color:#9fd6f0}
+.club h2{font-weight:450;font-stretch:120%;font-size:clamp(46px,6.4vw,100px);line-height:.9;letter-spacing:-.03em;margin:0 0 18px}
+.club .sub{font-size:18px;max-width:40ch;margin:0 0 28px;color:#e2f1f9}
+.club ul{list-style:none;margin:0 0 30px;padding:0;border-top:1px solid rgba(255,255,255,.3);max-width:520px}
+.club li{padding:11px 0 10px;border-bottom:1px solid rgba(255,255,255,.22);font-size:15.5px;display:flex;gap:12px}
+.club li::before{content:"";width:12px;height:1px;background:#9fd6f0;margin-top:12px;flex:none}
+.club .row{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.club .price{font-size:40px}
+.club .price small{font-size:14px;color:#cfe8f4}
+
+/* ---------- 6 · Ways we work ---------- */
+.ways{padding-block:clamp(88px,11vw,150px)}
+.ways-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.8vw,26px);margin-top:clamp(32px,5vw,64px)}
+.way figure{margin:0 0 18px;aspect-ratio:4/5;overflow:hidden;position:relative;background:#222}
+.way img{width:100%;height:100%;object-fit:cover}
+.way figure .cred{position:absolute;left:12px;bottom:10px}
+.way .mono{color:var(--blue-t)}
+.way h3{font-weight:450;font-stretch:118%;font-size:clamp(26px,2.6vw,36px);margin:8px 0 8px;line-height:1}
+.way p{margin:0;color:var(--muted);font-size:15.5px;max-width:36ch}
+.area{margin-top:clamp(48px,6vw,80px);display:grid;grid-template-columns:auto 1fr;gap:12px 28px;align-items:baseline;padding-top:22px;border-top:1px solid var(--ink)}
+.area .hoods{display:flex;flex-wrap:wrap;gap:4px 0;font-stretch:112%;font-size:clamp(20px,2.2vw,30px);line-height:1.35;min-width:0}
+.area .hoods span{white-space:nowrap}
+.area .hoods i{font-style:normal;color:var(--blue);margin:0 .4em}
+
+/* visit + trust */
+.visit{background:var(--sun);padding-block:clamp(88px,11vw,140px)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--ink);margin-top:clamp(28px,4vw,52px)}
+.steps div{padding:24px 24px 0 0}
+.steps .price{font-size:13px;color:var(--blue-t)}
+.steps h3{font-weight:450;font-stretch:118%;font-size:clamp(24px,2.3vw,32px);margin:8px 0;line-height:1}
+.steps p{margin:0;color:var(--muted);font-size:15px;max-width:30ch}
+.trust{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:clamp(48px,6vw,80px)}
+.slot{border:1px dashed rgba(18,22,26,.32);padding:18px 18px 16px;display:grid;gap:6px}
+.slot b{font-weight:500;font-stretch:110%}
+.slot span{color:var(--soft);font-size:13.5px}
+
+/* faq */
+.faq{padding-block:clamp(88px,11vw,150px)}
+.faq-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:clamp(28px,5vw,80px)}
+details{border-top:1px solid var(--rule)}
+details:last-child{border-bottom:1px solid var(--rule)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;padding:19px 0;font-size:18px;font-weight:500;font-stretch:105%}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);color:var(--blue-t);transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 20px;color:var(--muted);max-width:62ch}
+
+/* ---------- 7 · Book ---------- */
+.book{padding-block:clamp(96px,12vw,160px)}
+.book-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:clamp(28px,5vw,88px);align-items:start}
+.book-side p{font-size:17px;max-width:36ch;margin:22px 0 26px}
+.contactline{display:grid;gap:8px;border-top:1px solid var(--rule-d);padding-top:18px;color:var(--muted-d);font-size:15px}
+.tabs{display:grid;grid-template-columns:1fr 1fr;margin-bottom:0}
+.tabs button{appearance:none;border:0;padding:18px 16px 16px;font-weight:500;font-stretch:112%;font-size:16px;cursor:pointer;text-align:left;background:#1b232b;color:var(--muted-d);border-top:3px solid transparent;min-height:60px}
+.tabs button small{display:block;font:500 10.5px/1.5 var(--mono);letter-spacing:.12em;text-transform:uppercase;opacity:.8}
+.tabs button[aria-selected="true"]{background:var(--sun);color:var(--ink)}
+.tabs button[data-t="care"][aria-selected="true"]{border-top-color:var(--blue)}
+.tabs button[data-t="prot"][aria-selected="true"]{border-top-color:var(--bronze)}
+.fcard{background:var(--sun);color:var(--ink);padding:clamp(22px,3vw,40px);color-scheme:light}
+.prog{display:grid;gap:6px;margin-bottom:24px}
+.prog span{height:2px;background:var(--rule)}
+.prog span.on{background:var(--ink)}
+.fstep h3{font-weight:450;font-stretch:115%;font-size:clamp(24px,2.4vw,32px);margin:6px 0 20px}
+.fstep .mono{color:var(--blue-t)}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.fields .full{grid-column:1/-1}
+label.f{display:grid;gap:6px;font-size:13px;color:var(--muted)}
+label.f input,label.f select,label.f textarea{font:16px var(--sans);color:var(--ink);background:#fff;border:1px solid rgba(18,22,26,.22);padding:12px;border-radius:0;min-height:48px;width:100%}
+label.f textarea{min-height:92px;resize:vertical}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{position:relative;cursor:pointer}
+.opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opts span{display:block;padding:12px 14px 11px;border:1px solid rgba(18,22,26,.25);font-size:15px;transition:background .2s,color .2s;background:#fff}
+.opts input:checked+span{background:var(--ink);color:var(--sun);border-color:var(--ink)}
+.opts input:focus-visible+span{outline:2px solid var(--blue);outline-offset:2px}
+.plist{display:grid;gap:8px}
+.plist label{position:relative;cursor:pointer;display:block}
+.plist input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.plist .pl{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 16px;border:1px solid rgba(18,22,26,.22);background:#fff;transition:border-color .2s,box-shadow .2s}
+.plist .pl b{font-weight:500;font-stretch:112%;font-size:16px}
+.plist .pl small{color:var(--muted);font-size:13px;grid-column:1}
+.plist .pl .price{grid-row:1/3;grid-column:2;align-self:center;font-size:15px}
+.plist input:checked+.pl{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.plist input:focus-visible+.pl{outline:2px solid var(--blue);outline-offset:2px}
+.qb{margin-bottom:18px}
+.qb>.lab{font-size:15px;font-weight:500;margin-bottom:10px}
+.fnav{display:flex;justify-content:space-between;gap:10px;margin-top:24px;padding-top:18px;border-top:1px solid var(--rule)}
+.fnav .btn{min-width:120px}
+.ferr{color:#9a3b2e;font-size:14px;margin:12px 0 0;min-height:1em}
+.est{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:6px;padding:12px 14px;background:var(--sand);font-size:14px}
+.est .price{font-size:18px;white-space:nowrap}
+.done h3{font-weight:450;font-stretch:118%;font-size:clamp(28px,3vw,40px);margin:6px 0 12px}
+.done p{color:var(--muted)}
+.sum{list-style:none;margin:16px 0 0;padding:0;border-top:1px solid var(--rule)}
+.sum li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.sum li span:first-child{color:var(--muted)}
+.sum li span:last-child{text-align:right}
+
+/* footer */
+footer{background:var(--night);color:var(--paper);padding-block:clamp(56px,8vw,96px) calc(40px + env(safe-area-inset-bottom,0px))}
+footer .big{font-weight:500;font-stretch:125%;letter-spacing:.22em;font-size:clamp(36px,8vw,120px);line-height:1;margin-bottom:clamp(28px,4vw,56px)}
+.f-grid{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(3,minmax(0,1fr));gap:32px}
+footer h4{font:500 10.5px/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#8e8b86;margin:6px 0 14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15px;color:var(--muted-d)}
+footer a{text-decoration:none}
+.fslot{color:#8e8b86;border-bottom:1px dashed rgba(142,139,134,.6)}
+.credits{margin-top:48px;padding-top:20px;border-top:1px solid var(--rule-d);color:#8a867f;font-size:12.5px;line-height:1.7;max-width:110ch}
+
+.mbar{display:none}
+
+/* quiet reveals; content visible without JS */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform 1.1s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.cap>div,.ring,.hint,.pnl,.door{transition:none}}
+
+/* ---------- tablet ---------- */
+@media (max-width:1080px){
+  .nav nav{display:none}.nav .cta{display:none}.menu-btn{display:inline-block}
+  .sizebar .jump{display:none}
+  .coats{grid-template-columns:1fr}
+  .steps,.trust{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps div{padding-bottom:22px}
+  .lead-car{grid-template-columns:1fr;gap:40px}
+  .marques{display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
+  .car figcaption{grid-template-columns:1fr}
+  .car figcaption .where{justify-self:start;grid-row:2}
+  .inspect{grid-template-columns:1fr 1fr}
+  .inspect .txt{grid-column:1/-1}
+}
+/* ---------- phone: designed, not squeezed ---------- */
+@media (max-width:820px){
+  .open .photo{height:auto;min-height:0;aspect-ratio:3/4.2}
+  .open .photo img{object-position:30% 55%}
+  .open .head{top:auto;bottom:clamp(40px,10vw,70px)}
+  .open .head h2{font-size:clamp(44px,13vw,64px)}
+  .open .head p{font-size:16px}
+  .open .photo::after{background:linear-gradient(180deg,rgba(10,12,14,.35),rgba(10,12,14,0) 25%,rgba(10,12,14,.1) 45%,rgba(10,12,14,.75))}
+  .open .photo .cred{top:calc(76px + env(safe-area-inset-top,0px));bottom:auto}
+  .doors{grid-template-columns:1fr;margin-top:0}
+  .door{min-height:0;padding:26px var(--gut) 24px}
+  .door:hover{transform:none}
+  .sub-h{flex-direction:column;gap:8px}
+  .care-head,.prot-head,.paint,.film,.faq-grid,.book-grid,.also{grid-template-columns:1fr}
+  .sizebar{top:62px;margin-inline:calc(var(--gut) * -1);padding-inline:var(--gut)}
+  .sizebar .lab{display:none}
+  .seg{width:100%}.seg button{flex:1;padding:12px 6px 11px;letter-spacing:.06em}
+  .pkg,.pkg:nth-of-type(even){grid-template-columns:1fr;gap:20px;padding-block:36px 40px}
+  .pkg:nth-of-type(even) figure{order:0}
+  .pkg figure{margin-inline:calc(var(--gut) * -1);aspect-ratio:3/2}
+  .pkg h3{font-size:40px}
+  .pbuy{flex-direction:column;align-items:stretch}
+  .pbuy .btn{width:100%}
+  .addons .grid{grid-template-columns:1fr}
+  .addons figure{min-height:0;aspect-ratio:16/11}
+  .adlist{grid-template-columns:1fr}
+  .lead-car{grid-template-columns:1fr;gap:36px}
+  .marques{display:block}
+  .lead-car .ph{aspect-ratio:4/3;margin-inline:calc(var(--gut) * -1)}
+  .trio{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-inline:calc(var(--gut) * -1);padding-inline:var(--gut);scroll-padding-inline:var(--gut);scrollbar-width:none;margin-top:40px}
+  .trio::-webkit-scrollbar{display:none}
+  .trio .car{flex:0 0 80%;scroll-snap-align:start}
+  .trio .car:nth-child(2){margin-top:0}
+  .swipe{display:flex!important}
+  .coat{padding:22px 20px}
+  .plan-box{aspect-ratio:auto;height:58svh;max-height:none}
+  .inspect{grid-template-columns:1fr 1fr}
+  .inspect .txt{grid-column:1/-1}
+  .club .grid{grid-template-columns:1fr;min-height:0}
+  .club figure{aspect-ratio:4/3}
+  .ways-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(var(--gut) * -1);padding-inline:var(--gut);scroll-padding-inline:var(--gut);scrollbar-width:none}
+  .ways-grid::-webkit-scrollbar{display:none}
+  .way{flex:0 0 82%;scroll-snap-align:start}
+  .area{grid-template-columns:1fr}
+  .steps,.trust{grid-template-columns:1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .tabs button{padding:14px 12px 12px;font-size:15px}
+  .fields{grid-template-columns:1fr}
+  .panels{grid-template-columns:1fr 1fr}
+  .mbar{display:grid;grid-template-columns:1fr 1.25fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(243,237,227,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--rule);transform:translateY(110%);transition:transform .4s}
+  .mbar.show{transform:none}
+  .mbar a{display:flex;align-items:center;justify-content:center;text-align:center;padding:0 8px;line-height:1.15;min-height:50px;text-decoration:none;font-weight:500;font-stretch:108%;font-size:14.5px;border:1px solid var(--ink);color:var(--ink)}
+  .mbar a.p{background:var(--ink);color:var(--sun)}
+  footer{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+  .hint{bottom:calc(22px + env(safe-area-inset-bottom,0px));left:50%;right:auto;transform:translateX(-50%)}
+  .cap{top:calc(78px + env(safe-area-inset-top,0px));bottom:auto}
+  .shade{background:linear-gradient(180deg,rgba(10,10,10,.93) 0%,rgba(10,10,10,.82) 40%,rgba(10,10,10,.25) 58%,transparent 70%)}
+  .cap h1{font-size:36px;margin:10px 0 12px}
+  .cap p{font-size:15.5px}
+  .btns{margin-top:18px}
+  .btns .btn{flex:1 1 auto}
+}
+.swipe{display:none;justify-content:space-between;align-items:center;margin-top:12px;color:var(--soft)}
+@media (max-width:420px){.f-grid{grid-template-columns:1fr}.panels{grid-template-columns:1fr}}
+
+
+/* ================= type system v3 · LOUD → quiet ================= */
+.shout{font-weight:850;font-stretch:115%;text-transform:uppercase;letter-spacing:-.025em;line-height:.86;margin:0;text-wrap:balance;overflow-wrap:normal;hyphens:none}
+.big-it{font-style:italic;font-weight:350;font-stretch:100%;letter-spacing:-.02em;line-height:1;margin:.12em 0 0;font-size:clamp(34px,4.6vw,76px)}
+.line{font-size:clamp(19px,1.8vw,26px);line-height:1.25;font-weight:500;margin:18px 0 0;max-width:34ch}
+.btn{font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-stretch:112%;font-size:15px;min-height:58px;padding:18px 28px}
+.btn.wide{width:100%}
+.stage .btn{font-weight:500;text-transform:none;letter-spacing:normal;font-stretch:112%;min-height:50px;padding:16px 22px}
+.nav .cta{font-weight:700}
+.price{font-weight:600}
+/* doors */
+.open .head h2.shout{font-weight:850;font-stretch:115%;font-size:clamp(52px,8.4vw,150px);line-height:.86;letter-spacing:-.025em;max-width:9.5ch;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.open .head .big-it{color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.3)}
+.door{grid-template-rows:auto 1fr auto;gap:14px}
+.door h3.shout{font-size:clamp(36px,3.8vw,62px);line-height:.9;margin:0}
+.door p{font-size:17px;margin:0}
+.door .go b{font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:15px}
+/* care: WASHED RIGHT + menu */
+.care{padding-top:0}
+.w-hero{position:relative;height:min(92vh,960px);min-height:600px;overflow:hidden;color:#fff}
+.w-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.w-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 35%,rgba(0,0,0,.6))}
+.w-hero .in{position:absolute;left:0;right:0;bottom:clamp(36px,6vw,80px);z-index:1}
+.w-hero .shout{font-size:clamp(64px,13vw,220px);max-width:8ch}
+.w-hero .line{color:#fff}
+.w-hero .cred{position:absolute;right:var(--gut);top:84px;z-index:1}
+.care .sizebar{margin-top:0;border-top:0;border-bottom:1px solid var(--rule)}
+.care .sizebar .in{padding:14px 0;justify-content:space-between}
+.care .sizebar .lab{color:var(--soft)}
+.seg{border-width:2px}
+.seg button{font:800 13px/1 var(--sans);font-stretch:112%;letter-spacing:.04em;min-height:52px;padding:0 20px;border-right-width:2px}
+.pk{list-style:none;margin:clamp(20px,3vw,36px) 0 clamp(40px,6vw,90px);padding:0;border-top:3px solid var(--ink)}
+.pk a{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:clamp(14px,3vw,48px);padding:clamp(14px,1.6vw,22px) 0;border-bottom:1px solid var(--rule);text-decoration:none;color:inherit}
+.pk .nm{font-weight:850;font-stretch:115%;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(30px,5.2vw,84px);line-height:.95;transition:color .25s}
+.pk .t{color:var(--soft);font-size:clamp(13px,1.1vw,16px);letter-spacing:.06em;text-transform:uppercase}
+.pk .p{font-size:clamp(20px,2vw,30px);font-weight:600;min-width:4.4ch;text-align:right}
+.pk a:hover .nm{color:var(--blue-t)}
+/* package cards */
+.pkg{align-items:end;padding-block:clamp(44px,5.6vw,88px)}
+.pkg h3.pname{font-weight:850;font-stretch:115%;text-transform:uppercase;letter-spacing:-.025em;line-height:.86;font-size:clamp(46px,5vw,86px);margin:0 0 18px;text-wrap:balance}
+.pkg .toptag{display:inline-block;margin:0 0 14px;background:var(--ink);color:var(--sun);padding:6px 10px 5px;font-size:11px;letter-spacing:.14em}
+.pkg .lead{font-size:clamp(19px,1.8vw,26px);line-height:1.25;font-weight:500;color:var(--ink);margin:0 0 26px;max-width:24ch}
+.pkg .facts{display:flex;gap:10px 22px;align-items:baseline;flex-wrap:wrap;padding:18px 0;border-top:2px solid var(--ink);margin-bottom:20px}
+.pkg .facts .price{font-size:clamp(32px,3.2vw,48px);letter-spacing:-.02em}
+.pkg .facts .fr{font-size:.5em;color:var(--soft);margin-right:2px}
+.pkg .facts .t{color:var(--muted);font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.pkg .facts .sz{color:var(--soft);font-size:12px;letter-spacing:.06em;text-transform:uppercase;flex-basis:100%}
+.pkg details.inc{margin-top:20px}
+.pkg details.inc summary{font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:14px;padding:16px 0;border-top:2px solid var(--ink)}
+.pkg details.inc summary .mono{display:none}
+/* add-ons */
+.addons h2.shout{font-size:clamp(48px,5.6vw,96px);margin:0}
+.addons .sub{font-size:clamp(19px,1.8vw,24px);font-weight:500;margin:16px 0 30px;color:var(--ink)}
+.adlist div{font-weight:600}
+/* cars */
+.cars{padding-top:clamp(80px,10vw,140px)}
+.cars-head{display:block}
+.cars-head .shout{font-size:clamp(52px,7.4vw,124px);max-width:12ch}
+.cars-head .big-it{font-size:clamp(44px,6.4vw,108px)}
+.cars-head .mut{margin-top:22px;font-size:18px;max-width:40ch}
+.marques li{font-weight:700;font-stretch:112%}
+.car figcaption b{font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-stretch:112%}
+/* protection */
+.prot{padding-top:0}
+.p-hero{position:relative;height:min(92vh,940px);min-height:600px;overflow:hidden;margin-bottom:clamp(56px,7vw,110px)}
+.p-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.p-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,21,26,.5),rgba(16,21,26,0) 28%,rgba(16,21,26,.1) 50%,var(--deep))}
+.p-hero .in{position:absolute;left:0;right:0;bottom:clamp(28px,5vw,64px);z-index:1}
+.p-hero .shout{font-size:clamp(64px,11.6vw,200px);max-width:9ch}
+.p-hero .line{color:#e8eef2}
+.p-hero .btn{margin-top:26px}
+.p-hero .cred{position:absolute;right:var(--gut);top:84px;z-index:1}
+.blk-head{margin:clamp(64px,8vw,120px) 0 clamp(24px,3vw,40px)}
+.blk-head:first-child{margin-top:0}
+.shout.md{font-size:clamp(44px,5.4vw,92px)}
+.shout.sm{font-size:clamp(34px,3.4vw,56px);line-height:.9}
+.blk-head .line{color:var(--muted-d)}
+.prow h4{font-weight:800;text-transform:uppercase;letter-spacing:.01em;font-stretch:112%}
+.which{margin:18px 0 0;color:var(--muted-d);font-size:15px}
+.tiers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;background:rgba(237,235,231,.12)}
+.tier{background:var(--deep);padding:clamp(22px,2.6vw,38px) clamp(18px,2vw,30px) 28px;display:grid;gap:12px;align-content:start}
+.tier.mid{background:#17202a}
+.tier .f{color:var(--bronze-l);font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.tier .tname{font-weight:850;font-stretch:115%;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(34px,3.3vw,54px);line-height:.9;margin:0}
+.tier p{margin:0;font-size:18px;line-height:1.3;color:var(--muted-d)}
+.tier .price{font-size:clamp(28px,2.6vw,40px);margin-top:8px}
+.tier .price.q{font-size:clamp(17px,1.5vw,21px);color:var(--bronze-l);line-height:1.2}
+details.deep{border:0;border-top:2px solid rgba(237,235,231,.5);border-bottom:1px solid var(--rule-d);margin-top:22px}
+details.deep summary{font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:14px;padding:16px 0}
+details.deep summary::after{color:var(--paper)}
+details.deep .coats{margin:4px 0 16px}
+details.deep .small{margin:0 0 18px}
+details.deep .panels{margin-bottom:6px}
+.coat h4{font-weight:800;text-transform:uppercase;font-size:22px;letter-spacing:.01em}
+.filmband{margin:0 0 clamp(28px,4vw,48px)}
+.kit h4{font-weight:850;font-stretch:115%;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(32px,3.2vw,52px);line-height:.9}
+.kit .price{font-size:26px}
+.kits button{border-width:2px;font-weight:600}
+.also.tint{margin-top:clamp(64px,8vw,120px);align-items:end;padding-top:clamp(28px,3vw,40px);border-top:1px solid var(--rule-d)}
+.also.tint .price{display:block;margin-top:18px;font-size:28px;color:var(--bronze-l)}
+.inspect .txt h3.shout{font-size:clamp(30px,2.8vw,46px)}
+/* club */
+.club h2.shout{font-size:clamp(56px,7.4vw,128px);line-height:.86;margin:0 0 18px}
+.club .sub{font-size:clamp(19px,1.8vw,24px);font-weight:500}
+.club .price{font-size:clamp(40px,3.6vw,56px)}
+/* ways */
+.ways h2.shout{font-size:clamp(56px,8.6vw,150px)}
+.ways .line{color:var(--muted)}
+.way h3{font-weight:850;font-stretch:115%;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(28px,2.6vw,42px);line-height:.95;margin:0 0 10px}
+.way figure{margin-bottom:20px}
+/* visit */
+.kick{color:var(--soft);margin:0 0 18px}
+.bigsteps{list-style:none;margin:0;padding:0;border-top:3px solid var(--ink)}
+.bigsteps li{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:center;gap:clamp(16px,3vw,48px);padding:clamp(14px,1.8vw,24px) 0;border-bottom:1px solid var(--rule)}
+.bigsteps .shout{font-size:clamp(46px,7vw,120px);line-height:.9}
+.bigsteps span{font-size:clamp(17px,1.5vw,21px);color:var(--muted);max-width:30ch}
+/* faq + book */
+.faq h2.shout{font-size:clamp(48px,5.8vw,100px);max-width:8ch}
+summary{font-weight:700}
+.book h2.shout{font-size:clamp(48px,5.6vw,96px);max-width:8ch}
+.tabs button{font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:15px}
+.fstep h3{font-weight:850;font-stretch:115%;text-transform:uppercase;letter-spacing:-.02em;font-size:clamp(28px,2.6vw,40px);line-height:.95}
+.done h3{font-weight:850;font-stretch:115%;text-transform:uppercase;letter-spacing:-.02em;line-height:.95}
+@media (max-width:1080px){
+  .tiers{grid-template-columns:1fr}
+  .bigsteps li{grid-template-columns:1fr;gap:6px}
+}
+@media (max-width:820px){
+  .open .head h2.shout{font-size:clamp(44px,13.6vw,76px)}
+  .open .head .big-it{font-size:clamp(28px,8.4vw,44px)}
+  .door h3.shout{font-size:clamp(34px,10vw,52px)}
+  .w-hero{height:auto;min-height:0;aspect-ratio:3/4.2}
+  .w-hero img{object-position:58% 50%}
+  .w-hero .shout{font-size:clamp(52px,16.5vw,110px)}
+  .w-hero .cred{top:auto;bottom:10px;right:12px}
+  .care .sizebar .lab{display:none}
+  .seg button{font-size:12px;letter-spacing:0;padding:0 4px}
+  .pk a{grid-template-columns:1fr auto;row-gap:4px}
+  .pk .t{grid-row:2;grid-column:1}
+  .pk .p{grid-row:1/3;grid-column:2}
+  .pk .nm{font-size:clamp(28px,9.2vw,46px)}
+  .pkg h3.pname{font-size:clamp(42px,13vw,72px)}
+  .addons h2.shout{font-size:clamp(44px,13.4vw,72px)}
+  .cars-head .shout{font-size:clamp(42px,12.6vw,72px)}
+  .cars-head .big-it{font-size:clamp(36px,10.6vw,60px)}
+  .p-hero{height:auto;min-height:0;aspect-ratio:3/4.1}
+  .p-hero .shout{font-size:clamp(50px,15.5vw,110px)}
+  .p-hero .btn{width:100%}
+  .p-hero .cred{top:auto;bottom:auto;display:none}
+  .shout.md{font-size:clamp(38px,11.2vw,64px)}
+  .club h2.shout{font-size:clamp(50px,14.6vw,80px)}
+  .ways h2.shout{font-size:clamp(50px,14.6vw,84px)}
+  .bigsteps .shout{font-size:clamp(46px,14.6vw,84px)}
+  .faq h2.shout{font-size:clamp(46px,12.6vw,72px)}
+  .book h2.shout{font-size:clamp(46px,12.6vw,72px)}
+}
+/* size-to-fit: each headline sized to its own column (longest line = --w characters) */
+.open .head .in-fit,.open .head,.door,.w-hero .in,.pbody,.addons .body,.cars-head,.p-hero .in,.blk-head,.also.tint>div,.inspect .txt,.club .body,.ways .wrap,.bigsteps .k,.faq-grid>div:first-child,.book-side,.tier,.pk li{container-type:inline-size}
+.shout,.pkg h3.pname,.tier .tname,.way h3{text-wrap:nowrap;white-space:nowrap;max-width:none!important;font-size:min(var(--cap,120px),calc(100cqi / (var(--w,8) * .88)))!important}
+.way{container-type:inline-size}
+.way h3{--w:13;--cap:42px}
+.open .head h2.shout{--cap:150px}
+.door h3.shout{--cap:62px}
+.w-hero .shout{--cap:220px}
+.pkg h3.pname{--cap:92px}
+.addons h2.shout{--cap:96px}
+.cars-head .shout{--cap:124px}
+.p-hero .shout{--cap:200px}
+.shout.md{--cap:92px}
+.shout.sm{--cap:56px}
+.inspect .txt h3.shout{--cap:48px}
+.club h2.shout{--cap:128px}
+.ways h2.shout{--cap:150px}
+.bigsteps .shout{--cap:120px}
+.faq h2.shout{--cap:100px}
+.book h2.shout{--cap:96px}
+.tier .tname{--cap:54px}
+.pk .nm{white-space:nowrap;font-size:min(84px,calc((100cqi - var(--side,300px)) / 11.6))}
+.pk br.m{display:none}
+.shout,.pkg h3.pname,.tier .tname,.way h3{font-weight:850!important;font-stretch:115%!important;letter-spacing:-.025em!important;line-height:.86!important;text-transform:uppercase;margin-top:0}
+.open .head p.big-it{font-size:clamp(30px,4.4vw,72px);margin-top:.15em;max-width:none}
+.bigsteps .k{min-width:0}
+@media (max-width:820px){
+  .shout,.pkg h3.pname{--cap:96px}
+  .door h3.shout{--cap:56px}
+  .tier .tname{--cap:48px}
+  .pk .nm{white-space:normal;font-size:min(50px,calc((100cqi - 90px) / 6.6))}
+  .pk br.m{display:inline}
+  .open .head p.big-it{font-size:clamp(28px,8.6vw,44px)}
+  .btn{white-space:nowrap}
+  .inspect .txt .btn{width:100%;padding-inline:10px;font-size:14px}
+  .book-grid>*,.fcard,.fcard form{min-width:0}
+  .fnav .btn{white-space:normal;padding-inline:16px;min-width:0}
+}
+
+</style>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">VELADURA</a>
+    <nav aria-label="Main"><a href="#care">Wash &amp; Detail</a><a href="#protection">Protection</a><a href="#club">Club</a><a href="#ways">Studio &amp; mobile</a><a href="#faq">FAQ</a></nav>
+    <a class="cta" href="#book">Book now</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="sheet">Menu</button>
+  </div>
+</header>
+<div class="sheet" id="sheet" hidden>
+  <div class="row"><span class="brand">VELADURA</span><button type="button" id="menuClose">Close</button></div>
+  <a class="l" href="#care"><small>Door 1</small>Wash &amp; Detail</a><a class="l" href="#protection"><small>Door 2</small>Paint, Coating &amp; Film</a><a class="l" href="#club">Veladura Club</a><a class="l" href="#ways">Studio &amp; mobile</a><a class="l" href="#faq">FAQ</a>
+  <a class="btn" href="#book">Book now</a>
+</div>
+
+<main id="top">
+<!-- 1 · The Lamp (approved, locked) -->
+<section class="run" id="run" data-tone="night" aria-label="Paint inspection">
+  <div class="stage" id="stage">
+    <canvas id="cv" aria-label="Real footage: a detailer's inspection lamp moving across black paint under studio lights"></canvas>
+    <div class="shade"></div>
+    <div class="ring" id="ring" aria-hidden="true"></div>
+    <div class="cap" aria-live="polite"><div id="c">
+      <div class="mono acc">Paint correction · Ceramic coating · Paint protection film · Miami</div>
+      <h1>We read your paint before we touch it.</h1>
+      <p>Every job at Veladura starts the same way: lights off, one light, and an honest look at the finish. Drag the lamp to try it.</p>
+      <div class="btns"><a class="btn" href="#book">Book a paint inspection <span aria-hidden="true">→</span></a><a class="btn ghost" href="#care">See services</a></div>
+    </div></div>
+    <div class="hint mono" id="hint"><i></i>Drag the lamp</div>
+    <div class="load" id="load"></div>
+  </div>
+</section>
+
+<!-- 2 · Into the light: two doors -->
+<section class="open" id="doors" data-tone="photo" aria-label="Two ways to book">
+  <div class="photo">
+    <img src="img/hero-blue-2000.webp" srcset="img/hero-blue-700.webp 700w, img/hero-blue-1200.webp 1200w, img/hero-blue-2000.webp 2000w" sizes="100vw" alt="Light-blue Porsche 911 GT3 RS with bronze wheels, parked in bright Miami sun" loading="lazy">
+    <div class="head wrap">
+      <h2 class="shout" style="--w:8">Miami is<br>hard on<br>paint.</h2>
+      <p class="big-it">We're harder on detail.</p>
+    </div>
+    <span class="cred">Photo · Angelina Kusznirewicz · Unsplash · Miami</span>
+  </div>
+  <div class="wrap">
+    <div class="doors">
+      <a class="door care" href="#care"><h3 class="shout" style="--w:8">Wash &amp;<br>Detail</h3><p>Five packages. Shop, driveway or condo.</p><div class="go"><b>See packages →</b><span class="price">From $—</span></div></a>
+      <a class="door prot" href="#protection"><h3 class="shout" style="--w:8">Paint,<br>Coating<br>&amp; Film</h3><p>Polishing, ceramic coating, film and tint.</p><div class="go"><b>See protection →</b><span class="price">Quote after inspection</span></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · Care packages -->
+<section class="care" id="care" data-tone="sand">
+  <div class="w-hero">
+    <img src="img/wash-blue-1200.webp" srcset="img/wash-blue-700.webp 700w, img/wash-blue-1200.webp 1200w, img/wash-blue-2000.webp 2000w" sizes="100vw" alt="Hand wash mitt moving through thick foam on a blue car" loading="lazy" style="object-position:50% 50%">
+    <div class="in wrap"><h2 class="shout" style="--w:6">Washed<br>right.</h2><p class="line">Five packages. Book online in a minute.</p></div>
+    <span class="cred">Lorenzo Hamers · Unsplash</span>
+  </div>
+  <div class="wrap">
+    <div class="sizebar" id="sizebar">
+      <div class="in">
+        <div class="seg" role="group" aria-label="Vehicle size">
+          <button type="button" data-size="0" aria-pressed="true">Coupe · Sedan</button><button type="button" data-size="1" aria-pressed="false">SUV · Truck</button><button type="button" data-size="2" aria-pressed="false">Exotic</button>
+        </div>
+        <span class="mono lab">Prices update with your size</span>
+      </div>
+    </div>
+    <ul class="pk rv"><li><a href="#p1"><span class="nm">The<br class="m"> Wash</span><span class="t mono">1–1.5 hrs</span><span class="p mono" data-p>$—</span></a></li><li><a href="#p2"><span class="nm">Interior<br class="m"> Reset</span><span class="t mono">2–3 hrs</span><span class="p mono" data-p>$—</span></a></li><li><a href="#p3"><span class="nm">Inside<br class="m"> &amp; Out</span><span class="t mono">3 hrs</span><span class="p mono" data-p>$—</span></a></li><li><a href="#p4"><span class="nm">Full<br class="m"> Detail</span><span class="t mono">4–6 hrs</span><span class="p mono" data-p>$—</span></a></li><li><a href="#p5"><span class="nm">The<br class="m"> Works</span><span class="t mono">1–2 days</span><span class="p mono" data-p>$—</span></a></li></ul>
+
+    <article class="pkg rv" id="p1">
+      <figure><img src="img/bay-foam-1200.webp" srcset="img/bay-foam-700.webp 700w, img/bay-foam-1200.webp 1200w, img/bay-foam-2000.webp 2000w" sizes="(max-width:820px) 100vw, 56vw" alt="BMW covered in wash foam in a detailing bay while a detailer works behind it" loading="lazy" style="object-position:62% 50%"><span class="cred">lucas clarysse · Unsplash</span></figure>
+      <div class="pbody">
+        <h3 class="pname" style="--w:9">The<br>Wash.</h3>
+        <p class="lead">Foam, hand wash, wheels, glass. Done right.</p>
+        <div class="facts"><span class="price"><span class="fr">From </span><span data-p>$—</span></span><span class="mono t">1–1.5 hrs · shop or mobile</span><span class="mono sz" data-sz>Coupe / Sedan</span></div>
+        <a class="btn blue wide" href="#book" data-book="The Wash">Book it →</a>
+        <details class="inc"><summary>What's included <span class="mono">4 items</span></summary><ul><li>Foam pre-wash and two-bucket hand wash</li><li>Wheels, tires and door jambs</li><li>Glass inside and out</li><li>Quick vacuum and wipe-down</li></ul></details>
+      </div>
+    </article>
+
+    <article class="pkg rv" id="p2">
+      <figure><img src="img/int-seat-1200.webp" srcset="img/int-seat-700.webp 700w, img/int-seat-1200.webp 1200w, img/int-seat-2000.webp 2000w" sizes="(max-width:820px) 100vw, 56vw" alt="Detailer brushing the white leather seat of a modern BMW" loading="lazy" style="object-position:62% 45%"><span class="cred">Fine Automotive Detailing · Unsplash</span></figure>
+      <div class="pbody">
+        <h3 class="pname" style="--w:9">Interior<br>Reset.</h3>
+        <p class="lead">Every seat. Every vent. Every mat.</p>
+        <div class="facts"><span class="price"><span class="fr">From </span><span data-p>$—</span></span><span class="mono t">2–3 hrs</span><span class="mono sz" data-sz>Coupe / Sedan</span></div>
+        <a class="btn blue wide" href="#book" data-book="Interior Reset">Book it →</a>
+        <details class="inc"><summary>What's included <span class="mono">4 items</span></summary><ul><li>Full vacuum, steam and extraction</li><li>Leather cleaned and conditioned</li><li>Vents, screens and glass</li><li>UV protection on dash and trim</li></ul></details>
+      </div>
+    </article>
+
+    <article class="pkg rv" id="p3">
+      <figure><img src="img/shop-wash-1200.webp" srcset="img/shop-wash-700.webp 700w, img/shop-wash-1200.webp 1200w, img/shop-wash-2000.webp 2000w" sizes="(max-width:820px) 100vw, 56vw" alt="Detailer pressure-washing a silver Ferrari inside a detailing shop" loading="lazy" style="object-position:45% 55%"><span class="cred">Fine Automotive Detailing · Unsplash</span></figure>
+      <div class="pbody">
+        <h3 class="pname" style="--w:9">Inside<br>&amp; Out.</h3>
+        <p class="lead">The Wash and the Interior Reset. One visit.</p>
+        <div class="facts"><span class="price"><span class="fr">From </span><span data-p>$—</span></span><span class="mono t">3 hrs · shop or mobile</span><span class="mono sz" data-sz>Coupe / Sedan</span></div>
+        <a class="btn blue wide" href="#book" data-book="Inside &amp; Out">Book it →</a>
+        <details class="inc"><summary>What's included <span class="mono">3 items</span></summary><ul><li>Everything in The Wash</li><li>Everything in the Interior Reset</li><li class="plus">Spray sealant for gloss</li></ul></details>
+      </div>
+    </article>
+
+    <article class="pkg rv" id="p4">
+      <figure><img src="img/tire-dress-1200.webp" srcset="img/tire-dress-700.webp 700w, img/tire-dress-1200.webp 1200w, img/tire-dress-2000.webp 2000w" sizes="(max-width:820px) 100vw, 56vw" alt="Detailer dressing the tire of a grey Porsche 911 in a bright shop" loading="lazy" style="object-position:55% 60%"><span class="cred">Deniz Demirci · Unsplash</span></figure>
+      <div class="pbody">
+        <h3 class="pname" style="--w:9">Full<br>Detail.</h3>
+        <p class="lead">Top to bottom. Down to the wheel barrels.</p>
+        <div class="facts"><span class="price"><span class="fr">From </span><span data-p>$—</span></span><span class="mono t">4–6 hrs</span><span class="mono sz" data-sz>Coupe / Sedan</span></div>
+        <a class="btn blue wide" href="#book" data-book="Full Detail">Book it →</a>
+        <details class="inc"><summary>What's included <span class="mono">4 items</span></summary><ul><li>Everything in Inside &amp; Out</li><li class="plus">Iron and clay decontamination</li><li class="plus">Wheel barrels and engine bay</li><li class="plus">Durable paint sealant</li></ul></details>
+      </div>
+    </article>
+
+    <article class="pkg top rv" id="p5">
+      <figure><img src="img/polisher-1200.webp" srcset="img/polisher-700.webp 700w, img/polisher-1200.webp 1200w, img/polisher-2000.webp 2000w" sizes="(max-width:820px) 100vw, 56vw" alt="Detailer machine-polishing a glossy black car" loading="lazy" style="object-position:50% 40%"><span class="cred">Zac Nielson · Unsplash</span></figure>
+      <div class="pbody">
+        <span class="mono toptag">Top tier</span><h3 class="pname" style="--w:9">The<br>Works.</h3>
+        <p class="lead">Everything we've got. Polished and protected.</p>
+        <div class="facts"><span class="price"><span class="fr">From </span><span data-p>$—</span></span><span class="mono t">1–2 days · at the shop</span><span class="mono sz" data-sz>Coupe / Sedan</span></div>
+        <a class="btn blue wide" href="#book" data-book="The Works">Book it →</a>
+        <details class="inc"><summary>What's included <span class="mono">4 items</span></summary><ul><li>Everything in the Full Detail</li><li class="plus">One-step machine polish for gloss</li><li class="plus">Leather and fabric protection</li><li class="plus">Wheel faces sealed</li></ul></details>
+      </div>
+    </article>
+    <p class="note-ill">"$—" is a placeholder in this concept. Each size gets its own starting price at launch, and we confirm the final price before we start.</p>
+  </div>
+</section>
+
+<!-- add-ons -->
+<section class="addons" id="addons" data-tone="sand">
+  <div class="grid">
+    <figure><img src="img/wheel-spray-1200.webp" srcset="img/wheel-spray-700.webp 700w, img/wheel-spray-1200.webp 1200w, img/wheel-spray-2000.webp 2000w" sizes="(max-width:820px) 100vw, 42vw" alt="Pressure-washer spray hitting a BMW wheel with blue calipers" loading="lazy" style="object-position:50% 45%"><span class="cred">Ondrej Supitar · Unsplash</span></figure>
+    <div class="body rv">
+      <h2 class="shout" style="--w:9">Built for<br>Florida.</h2>
+      <p class="sub">Add to any package.</p>
+      <div class="adlist">
+        <div><span>Water-spot removal<span class="fl">Florida</span><small>Sprinkler and hard-water marks</small></span><span class="price">+$—</span></div>
+        <div><span>Lovebug &amp; bug removal<span class="fl">Florida</span><small>Residue lifted before the sun bakes it on</small></span><span class="price">+$—</span></div>
+        <div><span>Salt-air rinse &amp; underbody<span class="fl">Florida</span><small>For coastal and beach driving</small></span><span class="price">+$—</span></div>
+        <div><span>Storm-season storage prep<span class="fl">Florida</span><small>Before the car sits in a garage</small></span><span class="price">+$—</span></div>
+      </div>
+      <details class="more">
+        <summary><span>8 more add-ons</span><span class="mono">Headlights · engine bay · pet hair · odor · more</span></summary>
+        <div class="adlist sm">
+          <div><span>Headlight restoration</span><span class="price">+$—</span></div>
+          <div><span>Engine bay detail</span><span class="price">+$—</span></div>
+          <div><span>Pet hair removal</span><span class="price">+$—</span></div>
+          <div><span>Odor &amp; ozone treatment</span><span class="price">+$—</span></div>
+          <div><span>Clay decontamination</span><span class="price">+$—</span></div>
+          <div><span>Trim restoration</span><span class="price">+$—</span></div>
+          <div><span>Wheel &amp; caliper coating</span><span class="price">+$—</span></div>
+          <div><span>Glass coating</span><span class="price">+$—</span></div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- the cars -->
+<section class="cars" id="cars" data-tone="sand">
+  <div class="wrap">
+    
+    <div class="cars-head rv">
+      <h2 class="shout" style="--w:10">Daily<br>driver or<br>dream car.</h2><p class="big-it">Same standard.</p>
+      <p class="mut">You don't need an exotic. You just need to care about your car.</p>
+    </div>
+    <div class="lead-car">
+      <figure class="car rv"><div class="ph"><img src="img/bronco-shop-1200.webp" srcset="img/bronco-shop-700.webp 700w, img/bronco-shop-1200.webp 1200w, img/bronco-shop-2000.webp 2000w" sizes="(max-width:820px) 100vw, 64vw" alt="Orange Ford Bronco on the checkered floor of a detailing shop" loading="lazy" style="object-position:50% 55%"></div>
+        <figcaption><b>Ford Bronco</b><span class="where">In the bay</span><span class="note">Beach days, trail days, school runs. It still gets the full treatment.</span><span class="credit">Photo · Andre Tan · Unsplash</span></figcaption></figure>
+      <div class="rv">
+        <div class="mono marques-h">Every car, every time</div>
+        <ul class="marques"><li>Two-bucket hand wash</li><li>Clean mitts, clean towels</li><li>Wheels first, paint second</li><li>Nothing that scratches</li><li>A walk-around with you at the end</li></ul>
+      </div>
+    </div>
+    <div class="trio" id="trio">
+      <figure class="car rv"><div class="ph"><img src="img/eclass-shop-1200.webp" srcset="img/eclass-shop-700.webp 700w, img/eclass-shop-1200.webp 1200w, img/eclass-shop-2000.webp 2000w" sizes="(max-width:820px) 80vw, 31vw" alt="Grey Mercedes E-Class under the lights of a detailing shop" loading="lazy" style="object-position:40% 55%"></div>
+        <figcaption><b>Mercedes E-Class</b><span class="where">The daily</span><span class="note">Driven every day. Deserves it the most.</span><span class="credit">Photo · Deniz Demirci · Unsplash · plate frame blurred</span></figcaption></figure>
+      <figure class="car rv"><div class="ph"><img src="img/gt500-garage-1200.webp" srcset="img/gt500-garage-700.webp 700w, img/gt500-garage-1200.webp 1200w, img/gt500-garage-2000.webp 2000w" sizes="(max-width:820px) 80vw, 31vw" alt="Orange Ford Mustang Shelby GT500 in a dark garage" loading="lazy" style="object-position:45% 70%"></div>
+        <figcaption><b>Mustang Shelby GT500</b><span class="where">After hours</span><span class="note">Car people don&#39;t keep normal hours. Neither do we.</span><span class="credit">Photo · Andre Tan · Unsplash</span></figcaption></figure>
+      <figure class="car rv"><div class="ph"><img src="img/ferrari-1200.webp" srcset="img/ferrari-700.webp 700w, img/ferrari-1200.webp 1200w" sizes="(max-width:820px) 80vw, 31vw" alt="Yellow Ferrari 488 on a downtown Miami street under palms" loading="lazy" style="object-position:50% 72%"></div>
+        <figcaption><b>Ferrari 488</b><span class="where">Downtown Miami</span><span class="note">Parked in the Miami sun all day. Same wash, same care.</span><span class="credit">Photo · cristhian umaña · Unsplash</span></figcaption></figure>
+    </div>
+    <div class="swipe mono"><span>Swipe</span><span>→</span></div>
+    <p class="note-ill">Illustrative photography, not client work. No brand partnership implied.</p>
+  </div>
+</section>
+
+<!-- 4 · Protection -->
+<section class="prot dk" id="protection" data-tone="deep">
+  <div class="p-hero">
+    <img src="img/beading-1200.webp" srcset="img/beading-700.webp 700w, img/beading-1200.webp 1200w, img/beading-2000.webp 2000w" sizes="100vw" alt="Water beading on a coated blue Porsche hood" loading="lazy" style="object-position:50% 40%">
+    <div class="in wrap"><h2 class="shout" style="--w:10">Protect<br>the gloss.</h2><p class="line">Polishing, ceramic coating and film. We quote after we've seen the car.</p><a class="btn light" href="#book" data-tab="prot">Book a paint inspection →</a></div>
+    <span class="cred">Rana Singh · Unsplash</span>
+  </div>
+  <div class="wrap">
+    
+    <div class="blk-head"><h3 class="shout md" style="--w:10">Paint,<br>perfected.</h3><p class="line">Swirls out. Gloss back.</p></div>
+    <div class="paint">
+      <div>
+        <div class="prow"><h4>Paint Enhancement<small>One-step polish</small></h4><span class="price">From $—</span><p>Brings the gloss back. Right for newer paint, and the prep for a coating.</p></div>
+        <div class="prow"><h4>Paint Correction<small>Multi-stage</small></h4><span class="q">Quote after inspection</span><p>Takes out swirls and wash marks. We measure the paint first and only take what it can spare.</p></div>
+        <p class="which">Webbed or hazy in direct sun? Usually correction. Just tired? Enhancement.</p>
+      </div>
+      <div class="vid">
+        <img src="img/swirl-poster-1600.webp" alt="Circular swirl marks on dark paint lit by a detailer's light" loading="lazy">
+        <video id="swirlVid" muted loop playsinline preload="none" poster="img/swirl-poster-1600.webp" aria-label="Real footage: swirl marks showing under a detailer's light"><source src="img/swirls-720.mp4" type="video/mp4"></video>
+        <button class="btn ghost play" id="swirlPlay" type="button" hidden style="color:#fff">Play</button>
+        <div class="cap2"><b>Real swirl marks, under the light</b><span>Invisible under ceiling lights. Obvious under one bright light.</span></div>
+      </div>
+    </div>
+
+    <div class="blk-head"><h3 class="shout md" style="--w:10">Ceramic<br>coating.</h3><p class="line">Water slides off. Washing gets easy.</p></div>
+    <div class="tiers">
+      <div class="tier"><span class="mono f">Rated — yrs</span><h4 class="tname" style="--w:9">Essential</h4><p>One layer. Easy washing, lasting gloss.</p><span class="price">From $—</span></div>
+      <div class="tier mid"><span class="mono f">Most chosen</span><h4 class="tname" style="--w:9">Signature</h4><p>Polished first, then multi-layer.</p><span class="price">From $—</span></div>
+      <div class="tier"><span class="mono f">Rated — yrs</span><h4 class="tname" style="--w:9">Ultimate</h4><p>Full correction, then everything coated.</p><span class="price q">Quote after inspection</span></div>
+    </div>
+    <details class="deep"><summary>Compare what's included</summary>
+      <div class="coats">
+        <div class="coat"><h4>Essential</h4><span class="yrs">Rated — years · light prep</span><ul><li>Decontamination wash</li><li>Single-layer coating on paint</li><li>Easier washing, lasting gloss</li></ul></div>
+        <div class="coat mid"><h4>Signature</h4><span class="yrs">Rated — years · Enhancement included</span><ul><li>Paint Enhancement first</li><li>Multi-layer coating on paint</li><li>Wheel faces and glass coated</li></ul></div>
+        <div class="coat"><h4>Ultimate</h4><span class="yrs">Rated — years · Correction included</span><ul><li>Full Paint Correction first</li><li>Top-tier coating on paint, wheels and glass</li><li>Interior surfaces protected</li></ul></div>
+      </div>
+      <p class="small">"Rated — years" depends on the coating brand the studio carries; it's left blank in this concept rather than invented. Coatings add gloss and make washing easier. They don't stop rock chips; film does.</p>
+    </details>
+
+    <div class="blk-head"><h3 class="shout md" style="--w:10">Let the<br>film take<br>the hit.</h3><p class="line">Clear protection film for rock chips and road rash.</p></div>
+    <div class="coatband filmband"><img src="img/ppf-mclaren-1200.webp" srcset="img/ppf-mclaren-700.webp 700w, img/ppf-mclaren-1200.webp 1200w, img/ppf-mclaren-2000.webp 2000w" sizes="100vw" alt="Installer spraying and fitting clear protection film on an orange McLaren" loading="lazy" style="object-position:50% 40%"><span class="cred">David Glessner · Unsplash</span></div>
+    <div class="film">
+      <div class="plan-box rv"><svg id="plan" viewBox="-40 10 480 900" role="img" aria-label="Top-down plan of a car; covered panels are filled"></svg></div>
+      <div>
+        <div class="kits" role="group" aria-label="Film coverage">
+          <button type="button" data-k="0" aria-pressed="false">Partial front</button><button type="button" data-k="1" aria-pressed="true">Full front</button><button type="button" data-k="2" aria-pressed="false">Track pack</button><button type="button" data-k="3" aria-pressed="false">Full body</button>
+        </div>
+        <div class="kit" aria-live="polite"><h4 id="kitH">Full front</h4><p id="kitP"></p><span class="price" id="kitPrice">From $—</span></div>
+        <details class="deep"><summary>Panels covered</summary><ul class="panels" id="panels"></ul>
+        <p class="small">Clear gloss or matte (satin) finish. Kits are cut for each model, so exact panels vary by car; we confirm them at inspection.</p></details>
+      </div>
+    </div>
+
+    <div class="also tint">
+      <div><h3 class="shout sm" style="--w:10">Ceramic<br>tint.</h3><p class="line">Cooler cabin. Leather that lasts.</p><span class="price">From $—</span></div>
+      <p class="tint-law">Florida sets legal limits for how dark each window can be. We'll show you the legal options for your car before you choose.</p>
+    </div>
+
+    <div class="inspect">
+      <figure><img src="img/inspect-900.webp" alt="Detailer checking a fender with a handheld swirl-finder light" loading="lazy" style="object-position:30% 50%"></figure>
+      <figure><img src="img/measure-900.webp" alt="Paint thickness gauge held against a black door" loading="lazy" style="object-position:62% 50%"></figure>
+      <div class="txt"><h3 class="shout sm" style="--w:9">Inspected<br>under the<br>light.</h3><p>We walk the car with you under the same light from the top of this page, and measure the paint before any polishing.</p><a class="btn light" href="#book" data-tab="prot">Book a paint inspection →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · Club -->
+<section class="club" id="club" data-tone="blue">
+  <div class="grid">
+    <figure><img src="img/foam-grey-1200.webp" srcset="img/foam-grey-700.webp 700w, img/foam-grey-1200.webp 1200w, img/foam-grey-2000.webp 2000w" sizes="(max-width:820px) 100vw, 50vw" alt="Car and wheel buried in thick wash foam" loading="lazy" style="object-position:50% 45%"><span class="cred">Rana Singh · Unsplash</span></figure>
+    <div class="body rv">
+      
+      <h2 class="shout" style="--w:8">Veladura<br>Club.</h2>
+      <p class="sub">Stay clean. We come back every 2 or 4 weeks.</p>
+      <ul><li>A coating-safe wash every 2 or 4 weeks</li><li>Same detailer, reserved time slot</li><li>Your price, locked in</li><li>Member rate on add-ons and details</li><li>Coating check twice a year</li></ul>
+      <div class="row"><span class="price">$— <small>/ month</small></span><a class="btn light" href="#book" data-book="Veladura Club">Join the Club →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · Ways we work -->
+<section class="ways" id="ways" data-tone="sand">
+  <div class="wrap">
+    
+    <h2 class="shout rv" style="--w:7">We come<br>to you.</h2><p class="line rv">Or you come to us.</p>
+    <div class="ways-grid">
+      <div class="way rv"><figure><img src="img/tire-brush-1200.webp" srcset="img/tire-brush-700.webp 700w, img/tire-brush-1200.webp 1200w" sizes="(max-width:820px) 82vw, 31vw" alt="Gloved hand scrubbing a tire with a detailing brush" loading="lazy" style="object-position:40% 45%"><span class="cred">Zac Nielson · Unsplash</span></figure><h3>The shop</h3><p>Protection jobs and The Works, inside and out of the sun.</p></div>
+      <div class="way rv"><figure><img src="img/gt3rs-white-1200.webp" alt="White Porsche 911 GT3 RS parked outside a concrete building" loading="lazy" style="object-position:55% 60%"><span class="cred">Martin Katler · Unsplash</span></figure><h3>Your driveway</h3><p>Home or office. We bring the water and the power.</p></div>
+      <div class="way rv"><figure><img src="img/foam-gt3-1200.webp" alt="Porsche GT3 being foam-washed in a parking garage" loading="lazy" style="object-position:35% 60%"><span class="cred">Andre Tan · Unsplash</span></figure><h3>Your condo</h3><p>No hoses allowed? Low-water wash. We sort it out with the valet.</p></div>
+    </div>
+    <div class="area rv"><span class="demo">Example service area · concept</span><div class="hoods"><span>Brickell</span><i>·</i><span>Coral Gables</span><i>·</i><span>Coconut Grove</span><i>·</i><span>Key Biscayne</span><i>·</i><span>Miami Beach</span><i>·</i><span>Bal Harbour</span><i>·</i><span>Aventura</span><i>·</i><span>Pinecrest</span></div></div>
+  </div>
+</section>
+
+<!-- visit + trust -->
+<section class="visit" id="visit" data-tone="sun">
+  <div class="wrap">
+    
+    <p class="mono kick rv">How it works</p>
+    <ol class="bigsteps rv">
+      <li><div class="k"><b class="shout" style="--w:8">Book.</b></div><span>Online, in a minute. Or book a paint inspection.</span></li>
+      <li><div class="k"><b class="shout" style="--w:8">Confirm.</b></div><span>Time, place and final price. Before we start.</span></li>
+      <li><div class="k"><b class="shout" style="--w:8">Detail.</b></div><span>At the shop or at your place. Photos when it's done.</span></li>
+      <li><div class="k"><b class="shout" style="--w:8">Keep it.</b></div><span>Care tips, or the Club if you want it kept that way.</span></li>
+    </ol>
+    <div class="trust">
+      <div class="slot"><b>Google rating</b><span>Real client reviews shown here at launch. None are invented for this concept.</span></div>
+      <div class="slot"><b>Insurance</b><span>Coverage details added by the business.</span></div>
+      <div class="slot"><b>Certified installer</b><span>Film and coating brands added by the business.</span></div>
+      <div class="slot"><b>Warranty</b><span>Terms come from the product makers, explained in writing.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq" data-tone="sand">
+  <div class="wrap faq-grid">
+    <div><h2 class="shout rv" style="--w:10">Miami<br>questions.</h2></div>
+    <div class="rv">
+      <details><summary>Does the Miami sun really damage paint and leather?</summary><p>Constant UV and heat fade paint, dry out leather and crack plastics over time. Regular washes, UV protection inside, a coating or film outside, and ceramic tint all help slow it down.</p></details>
+      <details><summary>What are the white spots on my car?</summary><p>Usually water spots: minerals left when sprinkler or hard water dries in the sun. Fresh ones wash off; older ones need the water-spot removal add-on, and some need polishing.</p></details>
+      <details><summary>How soon should lovebugs come off?</summary><p>Within a day or two if you can. Fresh ones rinse off easily. Left in the Florida sun, the residue dries and bakes onto the finish, and it gets much harder to remove without marking the clear coat. They swarm twice a year, typically late spring and late summer.</p></details>
+      <details><summary>Can you wash my car in my condo garage?</summary><p>Yes. Where hoses aren't allowed, we use a low-water or waterless method and coordinate access with your building.</p></details>
+      <details><summary>What should I do before hurricane season?</summary><p>Wash and protect the paint before the car sits, clear the drains and cowl, and store it covered if you can. The storage-prep add-on handles this.</p></details>
+      <details><summary>How dark can my window tint be?</summary><p>Florida sets legal limits for tint darkness, and they differ by window. We'll show you the legal options for your car before you choose.</p></details>
+      <details><summary>How long will you have my car?</summary><p>A wash takes an hour or two; details take a few hours; correction, coating and film take one to several days. You'll get the time with your confirmation.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · Book -->
+<section class="book dk" id="book" data-tone="deep">
+  <div class="wrap">
+    
+    <div class="book-grid">
+      <div class="book-side">
+        <h2 class="shout rv" style="--w:10">Let's book<br>your car.</h2>
+        <p class="mut rv">Book a wash online, or get a protection quote. We confirm everything before we start.</p>
+        <div class="contactline"><span>Prefer to message? <b style="color:var(--paper)">WhatsApp and phone</b> are added by the business at launch.</span><span class="demo" style="justify-self:start">Concept · nothing is sent</span></div>
+      </div>
+      <div class="rv">
+        <div class="tabs" role="tablist" aria-label="Booking type">
+          <button type="button" role="tab" id="tab-care" data-t="care" aria-selected="true" aria-controls="form-care"><small>Door 1</small>Book a wash or detail</button>
+          <button type="button" role="tab" id="tab-prot" data-t="prot" aria-selected="false" aria-controls="form-prot"><small>Door 2</small>Get a protection quote</button>
+        </div>
+
+        <div class="fcard" id="form-care" role="tabpanel" aria-labelledby="tab-care">
+          <div class="prog" style="grid-template-columns:repeat(5,1fr)" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span><span></span></div>
+          <form id="fc" novalidate>
+            <div class="fstep" data-s="0"><div class="mono">Step 1 of 5</div><h3>Your car</h3>
+              <div class="qb"><div class="lab">Size</div><div class="opts">
+                <label><input type="radio" name="size" id="c-s0" value="Coupe / Sedan" checked><span>Coupe · Sedan</span></label><label><input type="radio" name="size" id="c-s1" value="SUV / Truck"><span>SUV · Truck</span></label><label><input type="radio" name="size" id="c-s2" value="Exotic / Oversized"><span>Exotic</span></label></div></div>
+              <div class="fields"><label class="f">Make<input id="c-make" name="make" autocomplete="off" placeholder="e.g. Porsche"></label><label class="f">Model<input id="c-model" name="model" autocomplete="off" placeholder="e.g. 911 Carrera"></label></div>
+            </div>
+            <div class="fstep" data-s="1" hidden><div class="mono">Step 2 of 5</div><h3>Package</h3>
+              <div class="plist">
+                <label><input type="radio" name="pkg" id="c-p1" value="The Wash"><span class="pl"><b>The Wash</b><small>About 1–1.5 hrs</small><span class="price" data-p>$—</span></span></label>
+                <label><input type="radio" name="pkg" id="c-p2" value="Interior Reset"><span class="pl"><b>Interior Reset</b><small>About 2–3 hrs</small><span class="price" data-p>$—</span></span></label>
+                <label><input type="radio" name="pkg" id="c-p3" value="Inside &amp; Out" checked><span class="pl"><b>Inside &amp; Out</b><small>About 3 hrs</small><span class="price" data-p>$—</span></span></label>
+                <label><input type="radio" name="pkg" id="c-p4" value="Full Detail"><span class="pl"><b>Full Detail</b><small>About 4–6 hrs</small><span class="price" data-p>$—</span></span></label>
+                <label><input type="radio" name="pkg" id="c-p5" value="The Works"><span class="pl"><b>The Works</b><small>About 1–2 days · studio</small><span class="price" data-p>$—</span></span></label>
+                <label><input type="radio" name="pkg" id="c-p6" value="Veladura Club"><span class="pl"><b>Veladura Club</b><small>Maintenance membership</small><span class="price">$— / mo</span></span></label>
+              </div>
+            </div>
+            <div class="fstep" data-s="2" hidden><div class="mono">Step 3 of 5</div><h3>Add-ons <span style="font-size:.55em;color:var(--soft)">(optional)</span></h3>
+              <div class="opts">
+                <label><input type="checkbox" name="add" id="a1" value="Water-spot removal"><span>Water spots +$—</span></label>
+                <label><input type="checkbox" name="add" id="a2" value="Lovebug removal"><span>Lovebugs +$—</span></label>
+                <label><input type="checkbox" name="add" id="a3" value="Salt-air rinse"><span>Salt-air rinse +$—</span></label>
+                <label><input type="checkbox" name="add" id="a4" value="Headlight restoration"><span>Headlights +$—</span></label>
+                <label><input type="checkbox" name="add" id="a5" value="Engine bay"><span>Engine bay +$—</span></label>
+                <label><input type="checkbox" name="add" id="a6" value="Pet hair"><span>Pet hair +$—</span></label>
+                <label><input type="checkbox" name="add" id="a7" value="Odor treatment"><span>Odor +$—</span></label>
+              </div>
+            </div>
+            <div class="fstep" data-s="3" hidden><div class="mono">Step 4 of 5</div><h3>Where and when</h3>
+              <div class="qb"><div class="opts">
+                <label><input type="radio" name="where" id="w1" value="At the studio" checked><span>At the studio</span></label><label><input type="radio" name="where" id="w2" value="At my home or office"><span>Home or office</span></label><label><input type="radio" name="where" id="w3" value="At my condo (low-water)"><span>Condo</span></label></div></div>
+              <div class="fields">
+                <label class="f full" id="addrLab" hidden>Address or building<input id="c-addr" name="addr" autocomplete="street-address"></label>
+                <label class="f">Preferred day<input id="c-day" name="day" type="date"></label>
+                <label class="f">Time window<select id="c-win" name="win"><option>Morning</option><option>Midday</option><option>Afternoon</option></select></label>
+              </div>
+            </div>
+            <div class="fstep" data-s="4" hidden><div class="mono">Step 5 of 5</div><h3>How should we confirm?</h3>
+              <div class="qb"><div class="opts"><label><input type="radio" name="via" id="v1" value="WhatsApp" checked><span>WhatsApp</span></label><label><input type="radio" name="via" id="v2" value="Text"><span>Text</span></label><label><input type="radio" name="via" id="v3" value="Email"><span>Email</span></label></div></div>
+              <div class="fields"><label class="f">Name<input id="c-name" name="name" autocomplete="name"></label><label class="f" id="c-contactLab">Phone<input id="c-contact" name="contact" autocomplete="tel" inputmode="tel"></label></div>
+            </div>
+            <div class="est" id="est"><span id="estTxt">Inside &amp; Out · Coupe / Sedan</span><span class="price" id="estP">From $—</span></div>
+            <p class="ferr" id="fcErr" aria-live="polite"></p>
+            <div class="fnav"><button class="btn ghost" type="button" id="fcBack" hidden>Back</button><span></span><button class="btn" type="submit" id="fcNext">Next →</button></div>
+          </form>
+          <div class="done" id="fcDone" hidden><div class="mono" style="color:var(--blue-t)">Request ready</div><h3>Thanks. We'll confirm the time and price.</h3><p>This is a concept website, so nothing was sent. On the live site this goes straight to the studio.</p><ul class="sum" id="fcSum"></ul><p style="margin-top:18px"><button class="btn ghost" type="button" id="fcAgain">Start again</button></p></div>
+        </div>
+
+        <div class="fcard" id="form-prot" role="tabpanel" aria-labelledby="tab-prot" hidden>
+          <div class="prog" style="grid-template-columns:repeat(4,1fr)" aria-hidden="true"><span class="on"></span><span></span><span></span><span></span></div>
+          <form id="fp" novalidate>
+            <div class="fstep" data-s="0"><div class="mono" style="color:var(--bronze)">Step 1 of 4</div><h3>Your car</h3>
+              <div class="fields"><label class="f">Year<input id="p-year" name="year" inputmode="numeric" autocomplete="off" placeholder="e.g. 2023"></label><label class="f">Make<input id="p-make" name="make" autocomplete="off" placeholder="e.g. Rolls-Royce"></label><label class="f">Model<input id="p-model" name="model" autocomplete="off" placeholder="e.g. Cullinan"></label><label class="f">Color<input id="p-color" name="color" autocomplete="off" placeholder="e.g. Black"></label></div></div>
+            <div class="fstep" data-s="1" hidden><div class="mono" style="color:var(--bronze)">Step 2 of 4</div><h3>What are you thinking about?</h3>
+              <div class="opts">
+                <label><input type="checkbox" name="svc" id="ps1" value="Paint enhancement"><span>Enhancement</span></label>
+                <label><input type="checkbox" name="svc" id="ps2" value="Paint correction"><span>Correction</span></label>
+                <label><input type="checkbox" name="svc" id="ps3" value="Ceramic coating"><span>Ceramic coating</span></label>
+                <label><input type="checkbox" name="svc" id="ps4" value="Protection film"><span>Protection film</span></label>
+                <label><input type="checkbox" name="svc" id="ps5" value="Window tint"><span>Tint</span></label>
+                <label><input type="checkbox" name="svc" id="ps6" value="Not sure yet"><span>Not sure yet</span></label>
+              </div>
+              <div class="qb" id="pKit" hidden style="margin-top:18px"><div class="lab">Film coverage</div><div class="opts"><label><input type="radio" name="kit" id="pk0" value="Partial front"><span>Partial front</span></label><label><input type="radio" name="kit" id="pk1" value="Full front" checked><span>Full front</span></label><label><input type="radio" name="kit" id="pk2" value="Track pack"><span>Track pack</span></label><label><input type="radio" name="kit" id="pk3" value="Full body"><span>Full body</span></label></div></div>
+            </div>
+            <div class="fstep" data-s="2" hidden><div class="mono" style="color:var(--bronze)">Step 3 of 4</div><h3>Its condition</h3>
+              <div class="qb"><div class="lab">In direct sun, do you see fine circles or haze?</div><div class="opts"><label><input type="radio" name="sun" id="su1" value="Yes"><span>Yes</span></label><label><input type="radio" name="sun" id="su2" value="Not sure" checked><span>Not sure</span></label><label><input type="radio" name="sun" id="su3" value="No"><span>No</span></label></div></div>
+              <label class="f full">Anything else? (optional)<textarea id="p-notes" name="notes" placeholder="Chips, scratches, a date you need it by…"></textarea></label>
+              <label class="f full" style="margin-top:14px">Photos (optional)<input id="p-photos" name="photos" type="file" accept="image/*" multiple></label>
+            </div>
+            <div class="fstep" data-s="3" hidden><div class="mono" style="color:var(--bronze)">Step 4 of 4</div><h3>How should we reach you?</h3>
+              <div class="qb"><div class="opts"><label><input type="radio" name="via" id="pv1" value="WhatsApp" checked><span>WhatsApp</span></label><label><input type="radio" name="via" id="pv2" value="Call"><span>Call</span></label><label><input type="radio" name="via" id="pv3" value="Email"><span>Email</span></label></div></div>
+              <div class="fields"><label class="f">Name<input id="p-name" name="name" autocomplete="name"></label><label class="f" id="p-contactLab">Phone<input id="p-contact" name="contact" autocomplete="tel" inputmode="tel"></label><label class="f full">Preferred inspection day (optional)<input id="p-day" name="day" type="date"></label></div>
+            </div>
+            <p class="ferr" id="fpErr" aria-live="polite"></p>
+            <div class="fnav"><button class="btn ghost" type="button" id="fpBack" hidden>Back</button><span></span><button class="btn" type="submit" id="fpNext">Next →</button></div>
+          </form>
+          <div class="done" id="fpDone" hidden><div class="mono" style="color:var(--bronze)">Request ready</div><h3>Thanks. We'll reply with an inspection time.</h3><p>This is a concept website, so nothing was sent. The final quote comes after we've seen the car.</p><ul class="sum" id="fpSum"></ul><p style="margin-top:18px"><button class="btn ghost" type="button" id="fpAgain">Start again</button></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer data-tone="deep">
+  <div class="wrap">
+    <div class="big">VELADURA</div>
+    <div class="f-grid">
+      <div><p style="margin:0;max-width:34ch;color:var(--muted-d)">Hand washes, full details, paint correction, ceramic coating and protection film. Miami.</p></div>
+      <div><h4>Wash &amp; Detail</h4><ul><li><a href="#p1">The Wash</a></li><li><a href="#p2">Interior Reset</a></li><li><a href="#p4">Full Detail</a></li><li><a href="#p5">The Works</a></li><li><a href="#club">Veladura Club</a></li></ul></div>
+      <div><h4>Protection</h4><ul><li><a href="#protection">Paint correction</a></li><li><a href="#protection">Ceramic coating</a></li><li><a href="#protection">Protection film</a></li><li><a href="#protection">Window tint</a></li></ul></div>
+      <div><h4>Studio</h4><ul><li><span class="fslot">Address · added by the business</span></li><li><span class="fslot">Hours · added by the business</span></li><li><span class="fslot">Phone / WhatsApp</span></li><li><a href="#book">Book now →</a></li></ul></div>
+    </div>
+    <div class="credits mono" style="text-transform:none;letter-spacing:.02em">Concept website by One Aim Agency. Veladura is a fictional studio: all prices are blank placeholders, and no reviews, certifications, results, addresses or partnerships are claimed. Photography: Angelina Kusznirewicz, Lorenzo Hamers, Fine Automotive Detailing, Deniz Demirci, Zac Nielson, Ondrej Supitar, Andre Tan, lucas clarysse, cristhian umaña, David Glessner, Rana Singh and Martin Katler (Unsplash); studio footage by Pavel Danilyuk (Pexels). Illustrative only; plates blurred. Car makes belong to their owners; no endorsement implied.</div>
+  </div>
+</footer>
+
+<div class="mbar" id="mbar"><a href="#book" id="mQuote">Protection quote</a><a class="p" href="#book" id="mBook">Book a wash or detail</a></div>
+
+<script>
+/* Veladura frame player: plays one continuous real clip as a frame sequence you control.
+   Frames load coarse-to-fine (every 16th first), and the player blends the two nearest real frames. */
+function Seq(o) {
+  const { canvas: cv, n } = o;
+  const phone = Math.min(innerWidth, innerHeight) < 700 || innerWidth < 700;
+  const base = phone ? o.base.m : o.base.d;
+  const crop = phone && o.cropM ? o.cropM : { x: 0, w: 1 };   // phone frames are a sharp crop of the full frame (x range)
+  const imgs = new Array(n).fill(null);
+  const ctx = cv.getContext('2d', { alpha: false });
+  let want = 0, shown = -1, raf = 0;
+  // coarse-to-fine load order
+  const order = [], seen = new Set();
+  for (let step = 16; step >= 1; step >>= 1) for (let i = 0; i < n; i += step) if (!seen.has(i)) { seen.add(i); order.push(i); }
+  if (!seen.has(n - 1)) order.push(n - 1);
+  let k = 0, live = 0;
+  const pump = () => {
+    while (live < 6 && k < order.length) {
+      const i = order[k++]; live++;
+      const im = new Image(); im.decoding = 'async';
+      im.onload = () => { imgs[i] = im; live--; o.onProgress && o.onProgress(imgs.filter(Boolean).length / n); shown = -1; kick(); pump(); };
+      im.onerror = () => { live--; pump(); };
+      im.src = base + String(i).padStart(3, '0') + '.webp';
+    }
+  };
+  pump();
+  const nearest = (i, dir) => { for (let j = i; j >= 0 && j < n; j += dir) if (imgs[j]) return j; return -1; };
+  // cover-fit with a focus point (0..1 in frame coords); phones can use their own focus
+  const view = { sx: 0, sy: 0, s: 1, W: 1, H: 1, iw: 16, ih: 9 };
+  function layout(im) {
+    const W = cv.clientWidth, H = cv.clientHeight, dpr = Math.min(devicePixelRatio || 1, 2);
+    if (cv.width !== Math.round(W * dpr) || cv.height !== Math.round(H * dpr)) { cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr); }
+    const iw = im.naturalWidth, ih = im.naturalHeight;
+    const f0 = (W / H < .8 && o.focusM) ? o.focusM : (o.focus || { x: .5, y: .5 });
+    const f = { x: (f0.x - crop.x) / crop.w, y: f0.y };
+    const s = Math.max(W / iw, H / ih) * (o.zoom || 1);
+    let sx = W / 2 - f.x * iw * s, sy = H / 2 - f.y * ih * s;
+    sx = Math.min(0, Math.max(W - iw * s, sx)); sy = Math.min(0, Math.max(H - ih * s, sy));
+    Object.assign(view, { sx, sy, s, W, H, iw, ih, dpr });
+  }
+  function frame() {
+    raf = 0;
+    const t = Math.max(0, Math.min(n - 1, want));
+    const a = nearest(Math.floor(t), -1) >= 0 ? nearest(Math.floor(t), -1) : nearest(Math.floor(t), 1);
+    if (a < 0) return;
+    const b = nearest(Math.ceil(t), 1);
+    const key = a + ':' + b + ':' + t.toFixed(3) + ':' + cv.clientWidth + 'x' + cv.clientHeight;
+    if (key === shown) return;
+    shown = key;
+    layout(imgs[a]);
+    const { sx, sy, s, iw, ih, dpr } = view;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.globalAlpha = 1; ctx.drawImage(imgs[a], sx, sy, iw * s, ih * s);
+    if (b > a && b >= 0) { const fr = (t - a) / (b - a); if (fr > .01) { ctx.globalAlpha = fr; ctx.drawImage(imgs[b], sx, sy, iw * s, ih * s); ctx.globalAlpha = 1; } }
+    o.onDraw && o.onDraw(t, view);
+  }
+  function kick() { if (!raf) raf = requestAnimationFrame(frame); }
+  addEventListener('resize', () => { shown = -1; kick(); });
+  return {
+    set(t) { want = t; kick(); },
+    get t() { return want; },
+    view,
+    // full-frame coords (0..1) <-> screen px
+    toScreen: (x, y) => [view.sx + (x - crop.x) / crop.w * view.iw * view.s, view.sy + y * view.ih * view.s],
+    toFrame: (px, py) => [crop.x + (px - view.sx) / (view.iw * view.s) * crop.w, (py - view.sy) / (view.ih * view.s)],
+    kick,
+  };
+}
+
+</script>
+<script>
+document.documentElement.classList.add('js');
+(() => {
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const $ = id => document.getElementById(id);
+const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
+
+/* ---------- The Lamp (approved and locked; unchanged mechanics) ---------- */
+const stage = $('stage'), run = $('run');
+const TRACK = [[0.5344, 0.6611], [0.5375, 0.6444], [0.5406, 0.6444], [0.55, 0.6333], [0.5531, 0.6278], [0.5594, 0.6111], [0.5656, 0.6056], [0.5688, 0.6], [0.5781, 0.5778], [0.5812, 0.5722], [0.5844, 0.5667], [0.5875, 0.5611], [0.5906, 0.55], [0.5969, 0.5389], [0.5969, 0.5333], [0.6031, 0.5278], [0.6031, 0.5278], [0.6062, 0.5222], [0.6094, 0.5222], [0.6094, 0.5222], [0.6094, 0.5167], [0.6094, 0.5167], [0.6094, 0.5167], [0.6125, 0.5167], [0.6125, 0.5167], [0.6062, 0.5222], [0.6062, 0.5278], [0.6031, 0.5333], [0.5906, 0.5556], [0.5875, 0.5611], [0.5844, 0.5667], [0.5812, 0.5667], [0.5719, 0.5833], [0.5625, 0.6], [0.5531, 0.6167], [0.5438, 0.6333], [0.5406, 0.6444], [0.5344, 0.6556], [0.5156, 0.6889], [0.5094, 0.7], [0.5031, 0.7111], [0.5, 0.7167], [0.4906, 0.7444], [0.4812, 0.7611], [0.475, 0.7778], [0.4656, 0.7944], [0.4625, 0.8056], [0.4625, 0.8167], [0.4531, 0.8389], [0.4469, 0.85], [0.4469, 0.8556], [0.4438, 0.8556], [0.4406, 0.8833], [0.4375, 0.8889], [0.4344, 0.9], [0.4312, 0.9222], [0.4281, 0.9333], [0.425, 0.95], [0.4219, 0.9944], [0.4219, 0.9944], [0.4219, 0.9944], [0.4219, 0.9944], [0.4281, 0.9833], [0.4312, 0.9667], [0.4344, 0.9444], [0.4438, 0.9111], [0.45, 0.8889], [0.4594, 0.8611], [0.4688, 0.8222], [0.4719, 0.8056], [0.4781, 0.7889], [0.4812, 0.7778], [0.4938, 0.7333], [0.4969, 0.7222], [0.5, 0.7111], [0.5062, 0.6833], [0.5094, 0.6722], [0.5125, 0.6556], [0.5188, 0.6389], [0.5188, 0.6278], [0.5219, 0.6111], [0.5219, 0.6056], [0.525, 0.5889], [0.5312, 0.5778], [0.5281, 0.5778], [0.5344, 0.5667], [0.5344, 0.5611], [0.5375, 0.55], [0.5406, 0.5444], [0.5406, 0.5389], [0.5438, 0.5333], [0.5469, 0.5278], [0.55, 0.5167], [0.5531, 0.5111], [0.5562, 0.5056], [0.5625, 0.5], [0.5625, 0.5056], [0.5656, 0.5], [0.5719, 0.4889], [0.575, 0.4833]];
+const N = TRACK.length;
+const CAP = [
+  { at: 0, hero: true },
+  { at: .38, n: 'What the lamp shows', h: 'Metallic flake. Clean reflections.', p: 'Close to the surface, one light shows what ceiling lights hide.' },
+  { at: .72, n: 'What we look for', h: 'Anything that scatters the light.', p: 'Swirls, haze and holograms show up around the lamp first. That’s where correction starts.' },
+];
+const heroHTML = $('c').innerHTML;
+const seq = Seq({
+  canvas: $('cv'), n: N, base: { d: 'seq/lamp/d/', m: 'seq/lamp/m/' },
+  focus: { x: .34, y: .6 }, focusM: { x: .52, y: .66 }, cropM: { x: .30, w: .42 }, zoom: innerWidth > 820 ? 1.2 : 1,
+  onProgress: f => { $('load').style.width = f * 100 + '%'; if (f >= 1) $('load').style.opacity = 0; },
+  onDraw: t => { const i = Math.round(t), [x, y] = seq.toScreen(TRACK[i][0], TRACK[i][1]); $('ring').style.transform = `translate(${x}px,${y}px)`; }
+});
+const progress = () => { const r = run.getBoundingClientRect(); return clamp(-r.top / (r.height - innerHeight)); };
+let cur = 0, target = 0, dragging = false, raf = 0, lastCap = 0;
+function nearestFrame(px, py) {
+  const [fx, fy] = seq.toFrame(px, py);
+  let best = cur, bd = 1e9;
+  for (let i = 0; i < N; i++) { const dx = TRACK[i][0] - fx, dy = (TRACK[i][1] - fy) * .5625, d = dx * dx + dy * dy + Math.abs(i - cur) * 2e-6; if (d < bd) { bd = d; best = i; } }
+  return best;
+}
+function setCap(ci) {
+  const c = $('c');
+  const fill = () => {
+    if (CAP[ci].hero) c.innerHTML = heroHTML;
+    else c.innerHTML = `<div class="mono acc">${CAP[ci].n}</div><h1 style="font-size:clamp(34px,4.6vw,66px)">${CAP[ci].h}</h1><p>${CAP[ci].p}</p>` + (ci === CAP.length - 1 ? '<div class="btns"><a class="btn" href="#book">Book a paint inspection <span aria-hidden="true">→</span></a></div>' : '');
+    c.classList.remove('off');
+  };
+  if (RM) fill(); else { c.classList.add('off'); setTimeout(fill, 260); }
+}
+function tick() {
+  raf = 0;
+  cur += (target - cur) * (RM ? 1 : .18);
+  if (Math.abs(target - cur) < .01) cur = target;
+  seq.set(cur);
+  const p = cur / (N - 1);
+  let ci = 0; CAP.forEach((c, i) => { if (p >= c.at) ci = i; });
+  if (ci !== lastCap) { lastCap = ci; setCap(ci); }
+  if (cur !== target) raf = requestAnimationFrame(tick);
+}
+const go = () => { if (!raf) raf = requestAnimationFrame(tick); };
+addEventListener('scroll', () => { if (!dragging) { target = progress() * (N - 1); go(); } }, { passive: true });
+const pt = e => { const r = stage.getBoundingClientRect(); return [e.clientX - r.left, e.clientY - r.top]; };
+stage.addEventListener('pointerdown', e => { if (e.target.closest('a,button')) return; dragging = true; stage.classList.add('hold'); $('hint').style.opacity = 0; target = nearestFrame(...pt(e)); go(); });
+stage.addEventListener('pointermove', e => { if (dragging) { target = nearestFrame(...pt(e)); go(); } });
+const up = () => { dragging = false; stage.classList.remove('hold'); };
+addEventListener('pointerup', up); addEventListener('pointercancel', up);
+window.__at = p => { const r = run.getBoundingClientRect(); scrollTo({ top: scrollY + r.top + p * (r.height - innerHeight), behavior: 'instant' }); };
+window.__drag = (fx, fy) => { const [x, y] = seq.toScreen(fx, fy); target = nearestFrame(x, y); go(); return Math.round(target); };
+target = progress() * (N - 1); go();
+
+/* ---------- nav tone + phone bar ---------- */
+const nav = $('nav'), mbar = $('mbar');
+const tones = [...document.querySelectorAll('[data-tone]')];
+function navTone() {
+  const y = 68; let tone = 'night';
+  for (const s of tones) { const r = s.getBoundingClientRect(); if (r.top <= y && r.bottom > y) { tone = s.dataset.tone; break; } }
+  nav.classList.toggle('lt', tone === 'sand' || tone === 'sun');
+  nav.classList.toggle('dkn', tone === 'deep' || tone === 'blue');
+  const inHero = run.getBoundingClientRect().bottom > 70;
+  const b = $('book').getBoundingClientRect();
+  mbar.classList.toggle('show', !inHero && !(b.top < innerHeight * .7 && b.bottom > 0));
+}
+addEventListener('scroll', navTone, { passive: true }); addEventListener('resize', navTone); navTone();
+$('menuBtn').addEventListener('click', () => { $('sheet').hidden = false; $('menuBtn').setAttribute('aria-expanded', 'true'); $('menuClose').focus(); });
+const closeMenu = () => { $('sheet').hidden = true; $('menuBtn').setAttribute('aria-expanded', 'false'); };
+$('menuClose').addEventListener('click', closeMenu);
+document.querySelectorAll('.sheet a').forEach(a => a.addEventListener('click', closeMenu));
+addEventListener('keydown', e => { if (e.key === 'Escape' && !$('sheet').hidden) closeMenu(); });
+
+/* ---------- quiet reveals ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -6% 0px' });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* phones: package contents start folded so the five packages scan quickly */
+
+/* ---------- vehicle size: every starting price follows it ---------- */
+const SIZES = ['Coupe / Sedan', 'SUV / Truck', 'Exotic / Oversized'];
+let size = 0;
+function setSize(i) {
+  size = i;
+  document.querySelectorAll('.seg button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.size === i)));
+  document.querySelectorAll('[data-p]').forEach(el => el.textContent = i === 2 ? 'Quote' : '$—');
+  document.querySelectorAll('.fr').forEach(el => el.hidden = i === 2);
+  document.querySelectorAll('[data-sz]').forEach(el => el.textContent = i === 2 ? 'Exotic & oversized · on request' : SIZES[i]);
+  const r = $('c-s' + i); if (r) r.checked = true;
+  est();
+}
+document.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => setSize(+b.dataset.size)));
+
+/* ---------- swirl footage plays only on screen ---------- */
+const vid = $('swirlVid');
+if (RM) { $('swirlPlay').hidden = false; }
+else new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { vid.preload = 'auto'; vid.play().catch(() => { $('swirlPlay').hidden = false; }); } else vid.pause(); }), { threshold: .25 }).observe(vid);
+$('swirlPlay').addEventListener('click', () => { vid.play(); $('swirlPlay').hidden = true; });
+
+/* ---------- PPF coverage diagram (kept from the approved site) ---------- */
+const NS = 'http://www.w3.org/2000/svg', CX = 200;
+const OUT = [[0,40],[60,42],[110,48],[140,58],[158,76],[166,105],[168,150],[170,200],[168,260],[162,322],[160,380],[161,450],[163,520],[166,580],[168,640],[167,700],[163,760],[156,810],[140,848],[110,866],[60,874],[0,876]];
+function smooth(pts, closed){ const P = closed ? [pts[pts.length-1], ...pts, pts[0], pts[1]] : [pts[0], ...pts, pts[pts.length-1]]; let d = `M${P[1][0]},${P[1][1]}`;
+  for (let i = 1; i < P.length - 2; i++) { const [p0,p1,p2,p3] = [P[i-1],P[i],P[i+1],P[i+2]]; d += `C${p1[0]+(p2[0]-p0[0])/6},${p1[1]+(p2[1]-p0[1])/6} ${p2[0]-(p3[0]-p1[0])/6},${p2[1]-(p3[1]-p1[1])/6} ${p2[0]},${p2[1]}`; }
+  return d + (closed ? 'Z' : ''); }
+const R = pts => pts.map(([x,y]) => [CX + x, y]), Lm = pts => pts.map(([x,y]) => [CX - x, y]);
+const both = half => [...R(half), ...Lm(half).reverse().slice(1, -1)];
+const PANELS = [
+  ['bumperF','mid',[[0,40],[60,42],[110,48],[140,58],[158,76],[166,104],[150,112],[100,104],[50,100],[0,99]]],
+  ['hoodP','mid',[[0,101],[50,102],[100,106],[146,114],[149,186],[100,186],[50,186],[0,186]]],
+  ['hoodR','mid',[[0,188],[50,188],[100,188],[149,188],[148,230],[143,292],[100,295],[50,297],[0,298]]],
+  ['fenderP','side',[[150,114],[166,107],[168,150],[169,186],[151,186]]],
+  ['fenderR','side',[[151,188],[169,188],[170,205],[168,260],[163,318],[150,318],[145,292],[149,230]]],
+  ['headlight','side',[[100,53],[140,63],[157,86],[152,95],[122,82],[98,64]]],
+  ['mirror','side',[[163,330],[192,326],[203,338],[193,352],[164,352]]],
+  ['apillar','side',[[143,296],[150,300],[152,320],[141,402],[134,398],[146,306]]],
+  ['doorF','side',[[151,322],[158,322],[155,380],[156,452],[140,452],[136,402],[142,330]]],
+  ['doorR','side',[[140,455],[156,455],[158,520],[160,562],[137,562],[135,470]]],
+  ['rocker','side',[[159,330],[163,330],[162,390],[163,450],[165,520],[167,580],[162,580],[160,520],[158,450],[157,390]]],
+  ['roof','mid',[[0,405],[90,403],[133,400],[135,470],[135,560],[131,610],[90,614],[0,615]]],
+  ['quarter','side',[[137,565],[163,565],[167,640],[166,700],[162,758],[150,768],[141,700],[135,626],[131,612]]],
+  ['trunk','mid',[[0,698],[80,697],[128,693],[139,700],[148,768],[138,798],[80,806],[0,808]]],
+  ['bumperR','mid',[[0,811],[80,809],[140,801],[151,772],[162,764],[156,810],[140,848],[110,866],[60,874],[0,876]]],
+  ['taillight','side',[[116,820],[150,806],[147,819],[120,829]]],
+];
+const GLASS = [[[0,300],[100,297],[142,295],[146,306],[133,396],[90,400],[0,402]],[[0,617],[90,616],[130,613],[134,626],[127,690],[80,694],[0,695]]];
+const PF = ['bumperF','hoodP','fenderP','headlight','mirror'], FF = [...PF,'hoodR','fenderR'], TP = [...FF,'apillar','rocker','bumperR'], FB = PANELS.map(p => p[0]);
+const KITS = [
+  { h:'Partial front', set:PF, cut:1, price:'From $—', p:'The bumper, headlights, mirrors and the leading edge of the hood and fenders. The first places stones hit.' },
+  { h:'Full front', set:FF, cut:0, price:'From $—', p:'The whole hood and both fenders, so there’s no film edge across the hood. A common choice for daily drivers.' },
+  { h:'Track pack', set:TP, cut:0, price:'From $—', p:'Full front plus the A-pillars, rockers and rear bumper: where fast roads and the car’s own tires throw debris.' },
+  { h:'Full body', set:FB, cut:0, price:'Quote after inspection', p:'Every painted panel. For new cars, special colors, and owners who’d rather not think about chips at all.' },
+];
+const svg = $('plan'), els = {};
+const add = (tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); svg.appendChild(e); return e; };
+for (const [x,y,w,h] of [[157,168,22,70],[157,618,22,72]]) for (const s of [1,-1]) add('rect', { x: s > 0 ? CX + x : CX - x - w, y, width: w, height: h, rx: 7, class: 'tyre' });
+for (const [k, type, pts] of PANELS) els[k] = (type === 'mid' ? [both(pts)] : [R(pts), Lm(pts)]).map(s => add('path', { d: smooth(s, true), class: 'pnl' }));
+for (const g of GLASS) add('path', { d: smooth(both(g), true), class: 'glass' });
+add('path', { d: smooth([...R(OUT), ...Lm(OUT).reverse().slice(1, -1)], true), class: 'body' });
+const cut = add('path', { d: `M${CX-152},187 L${CX+152},187`, class: 'cut', fill: 'none' });
+const LIST = [['bumperF','Front bumper'],['headlight','Headlights'],['mirror','Mirrors'],['hoodP','Hood'],['fenderP','Fenders'],['apillar','A-pillars'],['rocker','Rockers'],['doorF','Doors'],['roof','Roof'],['quarter','Rear quarters'],['trunk','Trunk lid'],['bumperR','Rear bumper']];
+const lis = LIST.map(([k, t]) => { const li = document.createElement('li'); li.innerHTML = `<span>${t}</span><i></i>`; $('panels').appendChild(li); return [k, li]; });
+function kit(i){
+  const K = KITS[i];
+  for (const [k] of PANELS) els[k].forEach(p => p.classList.toggle('on', K.set.includes(k)));
+  cut.style.opacity = K.cut;
+  for (const [k, li] of lis) { const on = K.set.includes(k); const part = (k === 'hoodP' && !K.set.includes('hoodR')) || (k === 'fenderP' && !K.set.includes('fenderR')); li.classList.toggle('on', on); li.querySelector('i').textContent = on ? (part ? 'partial' : 'covered') : '—'; }
+  $('kitH').textContent = K.h; $('kitP').textContent = K.p; $('kitPrice').textContent = K.price;
+  document.querySelectorAll('.kits button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.k === i)));
+}
+document.querySelectorAll('.kits button').forEach(b => b.addEventListener('click', () => kit(+b.dataset.k)));
+kit(1);
+
+/* ---------- booking: two doors, demo-safe (nothing is sent) ---------- */
+function tab(t) {
+  document.querySelectorAll('.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.t === t)));
+  $('form-care').hidden = t !== 'care'; $('form-prot').hidden = t !== 'prot';
+}
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => tab(b.dataset.t)));
+document.querySelectorAll('[data-tab]').forEach(a => a.addEventListener('click', () => tab(a.dataset.tab)));
+document.querySelectorAll('[data-book]').forEach(a => a.addEventListener('click', () => {
+  tab('care'); const v = a.dataset.book.replace('&amp;', '&');
+  const r = [...document.querySelectorAll('#fc input[name=pkg]')].find(x => x.value === v); if (r) r.checked = true; est();
+}));
+$('mQuote').addEventListener('click', () => tab('prot')); $('mBook').addEventListener('click', () => tab('care'));
+
+function stepper(o) {
+  const f = $(o.form), steps = [...f.querySelectorAll('.fstep')], bars = [...f.parentElement.querySelectorAll('.prog span')];
+  let s = 0;
+  const show = i => { s = i; steps.forEach((el, j) => el.hidden = j !== i); bars.forEach((b, j) => b.classList.toggle('on', j <= i)); $(o.back).hidden = i === 0; $(o.next).textContent = i === steps.length - 1 ? 'Send request →' : 'Next →'; $(o.err).textContent = ''; o.onStep && o.onStep(i); };
+  f.addEventListener('input', () => { $(o.err).textContent = ''; });
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    const err = o.check(s, f); if (err) { $(o.err).textContent = err; return; }
+    if (s < steps.length - 1) { show(s + 1); f.parentElement.scrollIntoView({ behavior: RM ? 'auto' : 'smooth', block: 'start' }); return; }
+    $(o.sum).innerHTML = o.summary(f).filter(r => r[1]).map(([a, b]) => `<li><span>${a}</span><span>${String(b).replace(/</g, '&lt;')}</span></li>`).join('');
+    f.hidden = true; f.parentElement.querySelector('.prog').hidden = true; $(o.done).hidden = false;
+  });
+  $(o.back).addEventListener('click', () => show(Math.max(0, s - 1)));
+  $(o.again).addEventListener('click', () => { f.reset(); o.reset && o.reset(); f.hidden = false; f.parentElement.querySelector('.prog').hidden = false; $(o.done).hidden = true; show(0); });
+  show(0);
+}
+const val = id => ($(id).value || '').trim();
+const contactOk = (via, c) => { if (!c) return via === 'Email' ? 'Add your email.' : 'Add your phone number.'; if (via === 'Email' && !/^\S+@\S+\.\S+$/.test(c)) return 'That email doesn’t look complete.'; if (via !== 'Email' && c.replace(/\D/g, '').length < 7) return 'That phone number looks too short.'; return ''; };
+function bindVia(form, labId, inputId) {
+  $(form).addEventListener('change', e => { if (e.target.name !== 'via') return; const em = e.target.value === 'Email'; $(labId).firstChild.textContent = em ? 'Email' : 'Phone'; const i = $(inputId); i.type = em ? 'email' : 'tel'; i.autocomplete = em ? 'email' : 'tel'; i.inputMode = em ? 'email' : 'tel'; });
+}
+bindVia('fc', 'c-contactLab', 'c-contact'); bindVia('fp', 'p-contactLab', 'p-contact');
+function est() {
+  const f = $('fc'), pkg = f.elements.pkg.value, sz = f.elements.size.value;
+  const club = pkg === 'Veladura Club', ex = sz.startsWith('Exotic');
+  $('estTxt').textContent = pkg + (club ? '' : ' · ' + sz);
+  $('estP').textContent = club ? '$— / month' : ex ? 'Quote on request' : 'From $—';
+}
+$('fc').addEventListener('change', e => {
+  if (e.target.name === 'size') setSize(SIZES.indexOf(e.target.value));
+  if (e.target.name === 'where') $('addrLab').hidden = e.target.value === 'At the studio';
+  est();
+});
+stepper({ form: 'fc', back: 'fcBack', next: 'fcNext', err: 'fcErr', sum: 'fcSum', done: 'fcDone', again: 'fcAgain',
+  check: (s, f) => {
+    if (s === 0 && (!val('c-make') || !val('c-model'))) return 'Add the make and model.';
+    if (s === 3 && f.elements.where.value !== 'At the studio' && !val('c-addr')) return 'Add the address or building so we know where to come.';
+    if (s === 4) { if (!val('c-name')) return 'Add your name.'; return contactOk(f.elements.via.value, val('c-contact')); }
+    return '';
+  },
+  summary: f => [['Car', val('c-make') + ' ' + val('c-model') + ' · ' + f.elements.size.value], ['Package', f.elements.pkg.value], ['Add-ons', [...f.querySelectorAll('input[name=add]:checked')].map(x => x.value).join(', ')], ['Where', f.elements.where.value + (val('c-addr') ? ' · ' + val('c-addr') : '')], ['When', (val('c-day') || 'Any day') + ' · ' + $('c-win').value], ['Confirm by', f.elements.via.value], ['Starting price', $('estP').textContent]],
+  reset: () => { $('addrLab').hidden = true; setSize(0); }
+});
+$('fp').addEventListener('change', e => { if (e.target.name === 'svc') $('pKit').hidden = !$('ps4').checked; });
+stepper({ form: 'fp', back: 'fpBack', next: 'fpNext', err: 'fpErr', sum: 'fpSum', done: 'fpDone', again: 'fpAgain',
+  check: (s, f) => {
+    if (s === 0 && (!val('p-make') || !val('p-model'))) return 'Add the make and model.';
+    if (s === 1 && !f.querySelector('input[name=svc]:checked')) return 'Pick at least one, or choose “Not sure yet”.';
+    if (s === 3) { if (!val('p-name')) return 'Add your name.'; return contactOk(f.elements.via.value, val('p-contact')); }
+    return '';
+  },
+  summary: f => [['Car', [val('p-year'), val('p-make'), val('p-model')].filter(Boolean).join(' ') + (val('p-color') ? ' · ' + val('p-color') : '')], ['Interested in', [...f.querySelectorAll('input[name=svc]:checked')].map(x => x.value).join(', ') + ($('ps4').checked ? ' (' + f.elements.kit.value + ')' : '')], ['Swirls in the sun', f.elements.sun.value], ['Photos', $('p-photos').files.length ? $('p-photos').files.length + ' attached' : ''], ['Reply by', f.elements.via.value]],
+  reset: () => { $('pKit').hidden = true; }
+});
+setSize(0);
+})();
+</script>
+<script>(function(){function k(){document.querySelectorAll('#nl-badge-frame,iframe[title*="Netlify"]').forEach(function(e){e.remove()})}k();new MutationObserver(k).observe(document.documentElement,{childList:true,subtree:true})})();</script>
+</body>
+</html>
